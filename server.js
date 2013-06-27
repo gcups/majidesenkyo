@@ -35,7 +35,7 @@ app.get('/app', routes.app);
 app.get('/detail/', routes.detail);
 app.get('/list/', routes.list);
 app.get('/search/', routes.search);
-app.listen(process.env.VCAP_APP_PORT || 80, function(){
+app.listen(process.env.VCAP_APP_PORT || 8001, function(){
 	console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
 
