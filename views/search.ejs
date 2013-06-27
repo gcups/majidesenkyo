@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<%- partial('partials/commons/html_header.ejs')%>
+	<link rel="stylesheet" type="text/css" media="all" href="/stylesheets/list.css">
+    </head>
+<body style="font-family: monospace;" >
+<style>
+.ui-field-contain .ui-input-search {
+    width: 75%;
+    margin: 0 0 0 5px;
+}
+</style>
+<div data-role="page" data-theme="e" id="page2" style="width: 320px;">
+     <div data-theme="e" data-role="header">
+         <div data-theme="e" data-role="header">
+         </div>
+         <div class="top_header">
+             <img src="/images/head_title.png" alt="image" />
+         </div>
+<%- partial('partials/commons/navbar.ejs')%>
+     </div>
+  <!-- contents_start *******************************-->
+  <div id="contents">
+        <div data-role="fieldcontain" style="width: 100%;">
+            <fieldset data-role="controlgroup" data-mini="true">
+                <input id="searchinput1" placeholder="" value="konishi yuko" type="search" />
+            </fieldset>
+        </div>
+  <section id="teamWrap">
+      <div class="teamA">
+    <hgroup>
+      <h1>検索結果</h1>
+    </hgroup>
+      <ul class="arrowsNoList">
+        <li><span class="profPhoto" style="background: url(/images/aya_hs.jpg) no-repeat; background-size:100% auto"><a href="/detail/?id=10" rel="external"><img src="/images/aya_hs.jpg" style="opacity: 0;"></a></span>
+          <div class="profText"><h3>福田むつみ</h3><p>ニックネーム:むっちゃん</p><p>お店:すいーとどりーむ</p><p>つぶやき:にゃんにゃんにゃん</p></div>
+        </li>
+        <li><span class="profPhoto" style="background: url(/images/hinako_kr.jpg) no-repeat; background-size:100% auto"><a href="/detail/?id=50" rel="external"><img src="/images/hinako_kr.jpg" style="opacity: 0;"></a></span>          <div class="profText"><h3>長谷川 あや</h3><p>ニックネーム:あやぱん</p><p>お店:すいーとどりーむ</p><p>みんなが元気になれるようなタレントになりたいです</p></div>
+        </li>
+        <li><span class="profPhoto" style="background: url(/images/rain.jpg) no-repeat; background-size:100% auto"><a href="/detail/?id=40" rel="external"><img src="/images/rain.jpg" style="opacity: 0;"></a></span>          <div class="profText"><h3>小西夕子</h3><p>ニックネーム:こにたん</p><p>お店:すいーとどりーむ</p><p>「遊びに来て良かった」と思ってもらえるようなスタッフになりたい</p></div>
+        </li>
+        <li><span class="profPhoto" style="background: url(/images/yuka_ki.jpg) no-repeat; background-size:100% auto"><a href="/detail/?id=70" rel="external"><img src="/images/yuka_ki.jpg" style="opacity: 0;"></a></span>          <div class="profText"><h3>小出 友華</h3><p>ニックネーム:ゆかぽん</p><p>お店:すいーとどりーむ</p><p>せっかく女の子として生まれてこれたのだから、思いっきり綾らしくHappyに過ごしたい！うふふふ</p></div>
+        </li>
+      </ul>
+  </div>
+</section>
+  
+  </div>
+  <!-- contents_end  --> 
+<%- partial('partials/commons/footer.ejs')%>
+</div>
+
+    </body>
+</html>

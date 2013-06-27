@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<%- partial('partials/commons/html_header.ejs')%>
+	<link rel="stylesheet" type="text/css" media="all" href="/stylesheets/list.css">
+    </head>
+<body  style="font-family: monospace; width: 320px;" >
+<div data-role="page" data-theme="e" id="page2">
+     <div data-theme="e" data-role="header">
+         <div data-theme="e" data-role="header">
+         </div>
+         <div class="top_header">
+             <img src="/images/head_title.png" alt="image" />
+         </div>
+<%- partial('partials/commons/navbar.ejs')%>
+     </div>
+  <!-- contents_start *******************************-->
+  <div id="contents">
+  <section id="teamWrap">
+      <div class="teamA">
+    <hgroup>
+      <h1>新サービス1課</h1>
+    </hgroup>
+      <ul class="arrowsNoList">
+        <li>
+          <span class="profPhoto" style="background: url(<%= img[610] %>) no-repeat; background-size:100% auto">
+            <a href="/detail/?id=610" rel="external"><img src="<%= img[610] %>" style="opacity: 0;"></a>
+          </span>
+          <div class="profText">
+            <h3><%= team[610] %></h3>
+            <%- text[610] %><br />
+            <% if (title[610]) { %> 「<%- title[610] %>」<% } %>
+          </div>
+        </li>
+        <li>
+          <span class="profPhoto" style="background: url(<%= img[620] %>) no-repeat; background-size:100% auto">
+            <a href="/detail/?id=620" rel="external"><img src="<%= img[620] %>" style="opacity: 0;"></a>
+          </span>
+          <div class="profText">
+            <h3><%= team[620] %></h3>
+            <%- text[620] %><br />
+            <% if (title[620]) { %> 「<%- title[620] %>」<% } %>
+          </div>
+        </li>
+        <li>
+          <span class="profPhoto" style="background: url(<%= img[630] %>) no-repeat; background-size:100% auto">
+            <a href="/detail/?id=630" rel="external"><img src="<%= img[630] %>" style="opacity: 0;"></a>
+          </span>
+          <div class="profText">
+            <h3><%= team[630] %></h3>
+            <%- text[630] %><br />
+            <% if (title[630]) { %> 「<%- title[630] %>」<% } %>
+          </div>
+        </li>
+        <li>
+          <span class="profPhoto" style="background: url(<%= img[640] %>) no-repeat; background-size:100% auto">
+            <a href="/detail/?id=640" rel="external"><img src="<%= img[640] %>" style="opacity: 0;"></a>
+          </span>
+          <div class="profText">
+            <h3><%= team[640] %></h3>
+            <%- text[640] %><br />
+            <% if (title[640]) { %> 「<%- title[640] %>」<% } %>
+          </div>
+        </li>
+        <li>
+          <span class="profPhoto" style="background: url(<%= img[650] %>) no-repeat; background-size:100% auto">
+            <a href="/detail/?id=650" rel="external"><img src="<%= img[650] %>" style="opacity: 0;"></a>
+          </span>
+          <div class="profText">
+            <h3><%= team[650] %></h3>
+            <%- text[650] %><br />
+            <% if (title[650]) { %> 「<%- title[650] %>」<% } %>
+          </div>
+        </li>
+        <li>
+          <span class="profPhoto" style="background: url(<%= img[660] %>) no-repeat; background-size:100% auto">
+            <a href="/detail/?id=660" rel="external"><img src="<%= img[660] %>" style="opacity: 0;"></a>
+          </span>
+          <div class="profText">
+            <h3><%= team[660] %></h3>
+            <%- text[660] %><br />
+            <% if (title[660]) { %> 「<%- title[660] %>」<% } %>
+          </div>
+        </li>
+      </ul>
+  </div>
+</section>
+  
+  </div>
+  <!-- contents_end  --> 
+<%- partial('partials/commons/footer.ejs')%>
+</div>
+
+    </body>
+</html>

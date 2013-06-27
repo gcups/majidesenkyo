@@ -1,0 +1,243 @@
+/*****************
+ * contents
+ *****************/
+
+#contents{
+display: block;
+clear: both;
+margin: 0;
+padding: 0;
+}
+
+/*****************
+ * team
+ *****************/
+#teamWrap {
+display: block;
+margin: 0;
+padding: 0;
+ }
+
+
+.member{
+    display: block;
+    margin: 0px;
+    height: 100%;
+}
+
+
+.member ul.articleList li a{
+display: block;
+padding: 5px 25px 5px 10px;
+overflow: hidden;
+text-overflow: ellipsis;
+-webkit-text-overflow: ellipsis;
+-o-text-overflow: ellipsis;
+line-height:40px;
+}
+
+
+
+
+
+/*****************
+ * teamA
+ ****************/
+
+.teamA{
+    display: block;
+    margin: 0px;
+    height: 100%;
+}
+
+.teamA hgroup{
+    color: #fff;
+    overflow: hidden; 
+    text-align: left;
+    background: repeat-x 0 100% #f576a3;
+    
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-device-pixel-ratio: 2) {
+
+    .teamA hgroup{
+        color: #fff;
+        overflow: hidden; 
+        text-align: left;
+        background: url(../images/title_a_bg@2x.png) repeat-x 0 100% #f576a3;
+    }
+
+}
+
+.teamA ul.arrowsNoList li{
+display: block;
+padding:5px 25px 5px 10px;
+overflow: hidden;
+text-overflow: ellipsis;
+-webkit-text-overflow: ellipsis;
+-o-text-overflow: ellipsis;
+}
+
+.teamA .arrowsNoList .profPhoto{
+    display: inline-block;
+    border: solid 2px  #f576a3;
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+    float:left;
+    margin:0 10px 0 0;
+    width:35%;
+}
+
+.teamA .arrowsNoList .profPhoto img{
+width:100%;
+}
+
+
+.teamA ul.arrowsNoList .profText h3{
+        color: #f576a3;
+}
+
+.teamA ul.arrowsNoList .profText{
+    display:block;
+    font-style:inherit;
+    color: #999;
+    overflow: hidden;
+    text-align: left;
+}
+
+/*********
+ * reset
+ ********/
+
+
+html{
+    -webkit-text-size-adjust: none;
+    }
+body{
+    color:#999;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    position: relative;
+    line-height: 160%;
+    font-size: 14px;
+    font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    }
+header,nav,section,article,hgroup,footer,figure,figcaption,menu {
+    display: block;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    }
+h1,h2,h3,h4,h5,h6{
+    font-size: 100%;
+    font-weight: normal
+    }
+h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,form,input,textarea {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    }
+li{
+    list-style:none;
+    }
+img {
+    border:0;
+    margin:0;
+    padding:0;
+    display: block;
+    width:100%;
+    }
+
+a:link,a:hover,a:visited{
+    text-decoration: none;
+    outline: none;
+    }
+/*share class*/
+.clear{clear:both;}
+.clearfix:after{
+    content:"";display:block;
+    height:0;clear:both;
+    visibility:hidden;
+    }
+.clearfix {
+    display:inline-table;
+    }
+.disp{
+    display: inline-block;
+    overflow:hidden;
+    height:0;
+}
+
+a {
+    /*color: #09C;*/
+    color:#999;
+    }
+
+/*****************
+ * textSize  & fontColor
+ ****************/
+.colorPink{
+    color:#f23f97;
+    }
+
+.colorWhite{
+    color:#FFF
+    }
+
+.colorRed{
+    color:#FF0000
+    }
+
+.colorGray{
+    color:#666
+    }
+.colorGrayLight{
+    color:#999
+    }
+.textLink{
+    color:#FF0000;
+    text-decoration:underline;
+    }
+.textBold{
+    font-weight:bold;
+    font-size: 14px;
+    }
+    
+    .h1{
+        font-size:22px;
+        }
+    .h2{
+        font-size:20px;
+        }
+    .h3{
+        font-size:18px;
+        }
+    .h4{
+        font-size:16px;
+        }
+    .p{
+        font-size:14px;
+        }
+        
+    .textSmall{
+    font-size:12px;
+    }
+    .textLarge{
+    font-size:25px;
+    }
+    
+        
+.teamA a{
+    color: #f576a3;
+}
+
+.teamA a:visited{
+    color: #f576a3;
+}
+

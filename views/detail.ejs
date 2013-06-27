@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<%- partial('partials/commons/html_header.ejs')%>
+<style>
+div#page1 .bubble {
+	position: absolute;
+	left: 20px;
+	border-left: 5px solid black;
+	border-top: 5px solid transparent;
+	-border-top-color: white;
+}
+div#page1 .bubble .body {
+	float: left;
+	padding: 5px 10px;
+	margin: 0 0 0 -15px;
+	border: 3px solid black;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	background: white;
+	font: bold 15px/1.2 "Chalkboard", "Comic Sans MS", cursive;
+	text-align: center;
+	color: black;
+	-position: relative;
+}
+div#page1 .top_header {
+	width: 315px;
+	height: 80px;
+	position: relative;
+	background: url('/images/head_bg.jpg');
+	border: 0px solid #b8b8b8;
+}
+div#page1 .detail_sections {
+	width:  315px;
+	position: relative;
+	margin: 5px 0 0 0;
+}
+div#page1 .img_section {
+	float:  left;
+	margin: 0 5px;
+}
+div#page1 .img_section img {
+	width:  130px;
+	height: 180px;
+	border: 3px solid rgb(252,193,224);
+}
+div#page1 .result {
+	clear: both;
+	width: 250px;
+	height: 30px;
+	margin: 0 auto;
+	border: 3px solid #59cd7b;
+	background: #f0f8ee;
+	padding: 3px 25px;
+	font-size: 20pt;
+}
+div#page1 .img_comment2 {
+	float:  left;
+	border-style: none;
+	font-weight: bold;
+}
+div#page1 .img_comment3 {
+	float:  right;
+	border-style: none;
+	font-weight: bold;
+}
+div#page1 .space {
+}
+div#page1 .vote {
+	margin: 10px 0 0 0;
+	clear:  left;
+}
+div#page1 .message_board {
+	margin: 20px 0 0 0;
+}
+div#page1 .message_board_title {
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 16pt;
+	letter-spacing: 0.1em;
+	background: #59cd7b;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#59cd7b),to(#f0f8ee));
+	background-image: -webkit-linear-gradient(#59cd7b,#f0f8ee);
+	background-image: -moz-linear-gradient(#59cd7b,#f0f8ee);
+	background-image: -ms-linear-gradient(#59cd7b,#f0f8ee);
+	background-image: -o-linear-gradient(#59cd7b,#f0f8ee);
+	background-image: linear-gradient(#59cd7b,#f0f8ee);
+}
+</style>
+   </head>
+	<body>
+		<div data-role="page" data-theme="e" id="page1">
+			<div>
+				<div class="top_header">
+					<img src="/images/head_title.png" alt="image" />
+				</div>
+<%- partial('partials/commons/navbar.ejs')%>
+			</div>
+			<div class="detail_sections">
+			<div class="condidate">
+			<div class="img_section">
+				<img id="img" src="<%= get_img %>" alt="image" />
+			</div>
+				<h3><%= team %></h3>
+				<%- text %><br />
+				<% if (title) { %> 「<%- title %>」<% } %>
+			<div class="result">
+			<div class="img_comment3" >円</div>
+			<div class="img_comment3" id="sum"><%= get_price %></div>
+			</div>
+			</div>
+			<form action="" id="form_price">
+			<div class="vote">
+			<input type="hidden" name="id" id="id" value="<%= get_id %>"
+			<div class="space">
+			   <select data-native-menu="false" name="selectmenu1" id="selectmenu1" data-theme="b" data-mini="true">
+				   <option selected value="100">
+					   100円
+				   </option>
+				   <option value="200">
+					   200円
+				   </option>
+				   <option value="300">
+					   300円
+				   </option>
+				   <option value="400">
+					   400円
+				   </option>
+				   <option value="500">
+					   500円
+				   </option>
+			  </select>
+			</div>
+			<div class="space">
+			  <input type="SUBMIT" value="投票" />
+			</div>
+                        <img id="ad_img" src="/images/butoukai/ad/banner_20130607.png" style="width: 100%" ><br>
+			</form>
+			</div>
+			<div class="message_board">
+			<div class="message_board_title">メッセージボード</div>
+			<div data-role="fieldcontain">
+			  <form action="" id="form_socket">
+				<fieldset data-role="controlgroup">
+				  お名前：<input type="text" name="name" id="name" placeholder=""><br>
+				  コメント：<input type="text" name="message" id="message" placeholder="">
+				</fieldset>
+				<input type="SUBMIT" value="送信" />
+			  </form>
+			 <dl id="list"></dl>
+			</div>
+			</div>
+<%- partial('partials/commons/footer.ejs')%>
+		</div>
+	</body>
+</html>

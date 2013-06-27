@@ -1,0 +1,113 @@
+<script type="text/javascript">
+   function slideSwitch() {
+       var $active = $('#slideshow img.active');
+       if ( $active.length == 0 ) $active = $('#slideshow img:last');
+       var $next =  $active.next().length ? $active.next() : $('#slideshow img:first');
+       $active.addClass('last-active');
+       $next.css({opacity: 0.0})
+           .addClass('active')
+           .animate({opacity: 1.0}, 1000, function() {
+               $active.removeClass('active last-active');
+         });
+   }
+   $(function() {
+       setInterval( "slideSwitch()", 3500 );
+   });
+</script>
+<style>
+div#page1 .top_header {
+    width: 315px;
+    height: 80px;
+    position: relative;
+    background: url('/images/head_bg.jpg');
+    border: 0px solid #b8b8b8;
+}
+div#page1 p, h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+div#page1 h1 {
+    padding: 7px 0 5px 5px;
+    font-size: 20px;   
+    text-align: center;
+}
+div#page1 h2 {
+    padding: 5px 0;
+    font-size: 16px; 
+    text-align: center;
+}
+div#page1 .top_sections {
+    width: 315px;
+    position: relative;
+}
+div#page1 .top_section {
+    width: 100%;
+    background: url('/images/bg_top_section.png');
+    text-align: center;
+    padding: 0 0 10px 0;
+}
+div#page1 .top_section_title {
+    background: url('/images/title_bar_bg.png');
+    font-size: 20pt;
+}
+div#local_idle {
+    width: 300px;
+    height: 100px;
+    background: url('/images/Japan.gif');
+}
+.kirakira {
+    height: 32px;
+    background: url("/images/kirakira.jpg");
+}
+.heart {
+    height: 32px;
+    background: url("/images/heart.jpg");
+}
+div#slideshow { position:relative; width:320px; height:180px; }
+div#slideshow img { position:absolute; top:0; left:0; z-index:8; }
+div#slideshow img.active { z-index:10; }
+div#slideshow img.last-active { z-index:9; }
+</style>
+        <div data-role="page" data-theme="e" id="page1">
+            <div data-theme="e" data-role="header">
+                <div data-theme="e" data-role="header">
+                </div>
+                <div class="top_header">
+                    <img src="/images/head_title.png" alt="image" />
+                </div>
+<%- partial('partials/commons/navbar.ejs')%>
+                <div class="top_sections">
+                    <h1 class="top_section_title">アイドル喫茶総選挙</h1>
+                    <div class="top_section">
+<h2>◇◆あなたのために歌いたい◆◇</h2>
+<p>TOP5 は、選抜ユニットでCDデビュー！</p>
+<img src="/images/KateRoseCafeElectionTop.jpg" alt="Kate Rose Cafe 総選挙" />
+                    </div>
+                    <h1 class="top_section_title">ご当地アイドル総選挙</h1>
+                    <div class="top_section">
+<h2> ～AKBだけじゃないんだからね！～</h2>
+<p>西暦2012年<br>世は、アイドル戦国時代<br>地方アイドルの熾烈な戦いが、<br>繰り広げられる・・・</p>
+<div class="kirakira" ></div>
+<div id="slideshow">
+<img src="/images/hokkaido.jpg" alt="北海道" />
+<img src="/images/niigata.jpg" alt="新潟"  />
+<img src="/images/kagawa.jpg" alt="香川" />
+<img src="/images/okinawa.jpg" alt="沖縄" />
+</div>
+<div class="kirakira" ></div>
+
+                    </div>
+                    <h1 class="top_section_title">ワタベの嫁総選挙</h1>
+                    <div class="top_section">
+<h2>♪みんなで総取り渡部さん♪</h2>
+<p>最強は、一人でいい<br>愛する者のイス取りゲームが、<br>今、始まろうとしてる・・・<p>
+<div class="heart" ></div>
+<img src="/images/watabe_harem.jpg" alt="ワタベの嫁総選挙" />
+<div class="heart" ></div>
+                    </div>
+                </div>
+            </div>
+            <div data-role="content" style="padding: 10px">
+            </div>
+<%- partial('partials/commons/footer.ejs')%>
+        </div>

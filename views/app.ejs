@@ -1,0 +1,128 @@
+<h1><%= title %></h1>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+        <link rel="stylesheet" href="stylesheets/my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js">
+        </script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>$
+        <script src="/socket.io/socket.io.js"></script>$
+        <script src="/javascripts/client.js"></script>$
+
+<script>
+
+/* 2009/08/05, 2010/03/03 */
+var mouseDown = false;
+var penX = 0;
+var penY = 0;
+var penWidth = 10;
+var ctx;
+
+function draw(){
+	if (!ctx){
+		var canvas = document.getElementById('canvas1');
+		ctx = canvas.getContext('2d');
+	}
+
+	ctx.beginPath();
+	ctx.fillStyle = "#0099ff";
+	ctx.arc(penX, penY, penWidth, 0, Math.PI*2, false);
+	ctx.fill();
+}
+
+function onMouseMove(event){
+	//マウスボタンを押している場合は描画する
+	if (mouseDown){
+		//マウス座標とCanvasの座標を適当に調整
+		penX = event.clientX - 15;
+		penY = event.clientY - 15;
+		draw();
+	}
+	debug();
+}
+
+function onMouseDown(b){
+	mouseDown = b;
+	debug();
+}
+
+function debug(){
+	var s = "X&Y : "+ penX +", "+ penY + "<br/>"
+		  + "mouse button:" + (mouseDown ? "put" : "do not put") + "<br/>";
+	document.getElementById("mouse_state").innerHTML = s;
+}
+
+</script>
+<style>
+canvas#canvas1 {  background:url(images/452.jpg) }
+pre { font-family:"ＭＳ Ｐゴシック"; font-size:10.5pt; line-height:80%; }
+</style>
+    </head>
+    <body>
+        <div data-role="page" id="page1">
+            <div data-role="content">
+                <div style="">
+                    <img style="width: 100%; height: 50px" src="http://codiqa.com/static/images/v3/codiqa_logo.png" />
+                </div>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li>
+                            <a href="#page1" data-theme="" data-icon="" class="ui-btn-active">
+                                food
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page1" data-theme="" data-icon="">
+                                fashion
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page1" data-theme="" data-icon="">
+                                hobby
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page1" data-theme="" data-icon="">
+                                electric
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div style="width: 100%; height: 200px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+                    <img src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px" />
+                </div>
+            </div>
+
+            <div data-role='content' style="margin: 5px 5px">
+            <canvas id="canvas1" 
+               onmousemove="onMouseMove(event)"
+               onmouseout="onMouseDown(false)"
+               onmouseup="onMouseDown(false)"
+               onmousedown="onMouseDown(true)"
+               style="width: 325px; height: 215px" />
+            </canvas>	
+            </div>
+        <div id="mouse_state"></div>
+
+        <div data-role="content">
+        <form action="" id="form">
+        name: <input type="text" name="name" id="name" />
+        message: <input type="text" name="message" id="message" />
+        <input value="send" type="submit" />
+        </form>
+        <dl id="list"></dl>
+     </div>
+    </div>
+   </body>
+
+
