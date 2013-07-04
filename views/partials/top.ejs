@@ -63,6 +63,18 @@ div#local_idle {
     height: 32px;
     background: url("/images/heart.jpg");
 }
+div#ad_header {
+    width: 100%;
+}
+div#ad_header img {
+    width: 100%;
+}
+div#ad_footer {
+    width: 100%;
+}
+div#ad_footer img {
+    width: 100%;
+}
 div#slideshow { position:relative; width:320px; height:180px; }
 div#slideshow img { position:absolute; top:0; left:0; z-index:8; }
 div#slideshow img.active { z-index:10; }
@@ -77,12 +89,27 @@ div#slideshow img.last-active { z-index:9; }
                 </div>
 <%- partial('partials/commons/navbar.ejs')%>
                 <div class="top_sections">
+<div id="ad_header">
+<!--
+<a href="http://hb.afl.rakuten.co.jp/hgc/0caafbcc.e661d1d6.0caafbcd.37106065/?pc=http%3a%2f%2fbooks.rakuten.co.jp%2frb%2f11555507%2f%3fscid%3daf_link_tbl&m=http%3a%2f%2fm.rakuten.co.jp%2fbook%2fi%2f15744937%2f"><img src="/images/butoukai/ad/banner_20130705_1.png"></a>
+-->
+<a href="https://cat.infoseek.co.jp/"><img src="/images/butoukai/ad/banner_20130705_2.gif"></a>
+</div>
+                    <h1 class="top_section_title">Tech Talk</h1>
+                    <div class="top_section">
+<h2>～CIを極めし者達～</h2>
+<p>勝つのは誰だ！？</p>
+<img src="/big_data/20130710/images/CiTechTalkElectionTop.jpg" alt="CI Tech Talk 総選挙" />
+<br><br>
+                    </div>
+
                     <h1 class="top_section_title">アイドル喫茶総選挙</h1>
                     <div class="top_section">
 <h2>◇◆あなたのために歌いたい◆◇</h2>
 <p>TOP5 は、選抜ユニットでCDデビュー！</p>
 <img src="/images/KateRoseCafeElectionTop.jpg" alt="Kate Rose Cafe 総選挙" />
                     </div>
+
                     <h1 class="top_section_title">ご当地アイドル総選挙</h1>
                     <div class="top_section">
 <h2> ～AKBだけじゃないんだからね！～</h2>
@@ -95,8 +122,9 @@ div#slideshow img.last-active { z-index:9; }
 <img src="/images/okinawa.jpg" alt="沖縄" />
 </div>
 <div class="kirakira" ></div>
-
                     </div>
+
+<!--
                     <h1 class="top_section_title">ワタベの嫁総選挙</h1>
                     <div class="top_section">
 <h2>♪みんなで総取り渡部さん♪</h2>
@@ -105,6 +133,10 @@ div#slideshow img.last-active { z-index:9; }
 <img src="/images/watabe_harem.jpg" alt="ワタベの嫁総選挙" />
 <div class="heart" ></div>
                     </div>
+-->
+<div id="ad_footer">
+<img src="/images/butoukai/ad/banner_20130405.png">
+</div>
                 </div>
             </div>
             <div data-role="content" style="padding: 10px">

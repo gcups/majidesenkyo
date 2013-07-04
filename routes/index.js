@@ -14,39 +14,27 @@ var appJS = require('../app.js');
 //
 // ----------------------------------------------------------------------------------------------
 var teamList = {
-	610:"Guest",
-	620:"TS",
-	630:"NSYS",
-	640:"COM",
-	650:"LM",
-	660:"ME",
+	710:"Xuebin Ma",
+	720:"Miki Matsumoto",
+	730:"Hirobumi Takahashi",
 };
 
 var textList = {
-	610:"大貝 滝あさん",
-	620:"趙 紫剣さん",
-	630:"関戸 卓さん",
-	640:"市原 大介さん<br>鱒渕 勝幸さん",
-	650:"Rishab Mahajanさん",
-	660:"小西 雄三さん",
+	710:"(DAD)",
+	720:"(BDD)",
+	730:"(DAD)",
 };
 
 var titleList = {
-	610:"リサーチのサービスとシステムの紹介（仮）",
-	620:"並行処理について（仮）",
-	630:"<span style=\"text-decoration: line-through\">ハッカーと走者</span><br>ハッカーと歩者",
-	640:"パズドラの話（仮）",
-	650:"If you don't OpenSource, You are writing SHIT",
-	660:"パンドラの箱<br>　～禁断の箱を開けた時～",
+	710:"Shared&nbsp;Jenkins",
+	720:"Lone-wolf&nbsp;Jenkins",
+	730:"Shared&nbsp;Bamboo",
 };
 
 var imgList = {
-	610:"/images/butoukai/20130607/ogai.png",
-	620:"/images/butoukai/20130607/zhao.png",
-	630:"/images/butoukai/20130607/sekido.jpg",
-	640:"/images/butoukai/20130607/ichihara.jpg",
-	650:"/images/butoukai/20130607/rish.jpg",
-	660:"/images/butoukai/20130607/konishi.jpg",
+	710:"/big_data/20130710/images/01_jenkins_shared.jpg",
+	720:"/big_data/20130710/images/02_jenkins_lonewolf.jpg",
+	730:"/big_data/20130710/images/03_bamboo_shared.jpg",
 };
 
 
