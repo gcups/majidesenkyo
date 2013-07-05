@@ -14,27 +14,39 @@ var appJS = require('../app.js');
 //
 // ----------------------------------------------------------------------------------------------
 var teamList = {
-	710:"Xuebin Ma",
-	720:"Miki Matsumoto",
-	730:"Hirobumi Takahashi",
+	810:"Guest",
+	820:"COM",
+	830:"ME",
+	840:"TS",
+	850:"NSYS",
+	860:"LM",
 };
 
 var textList = {
-	710:"(DAD)",
-	720:"(BDD)",
-	730:"(DAD)",
+	810:"Yuki Tanaka",
+	820:"Kawasaki Aoi<br>Izumi Chiyuki<br>Otsuka Reina",
+	830:"Nozomi Yamawaki<br>Keiko Saito",
+	840:"Namie Murata",
+	850:"Kanako Nakai",
+	860:"Wen Ting",
 };
 
 var titleList = {
-	710:"Shared&nbsp;Jenkins",
-	720:"Lone-wolf&nbsp;Jenkins",
-	730:"Shared&nbsp;Bamboo",
+	810:"RIT introduction",
+	820:"だって女の子なんだもん",
+	830:"Infoseek Single Sign On",
+	840:"不動産と負荷試験",
+	850:"nsys-dba 近況報告",
+	860:"ブランド座談",
 };
 
 var imgList = {
-	710:"/big_data/20130710/images/01_jenkins_shared.jpg",
-	720:"/big_data/20130710/images/02_jenkins_lonewolf.jpg",
-	730:"/big_data/20130710/images/03_bamboo_shared.jpg",
+	810:"/images/butoukai/20130705/tanaka.jpg",
+	820:"/images/butoukai/20130705/kawasaki.jpg",
+	830:"/images/butoukai/20130705/yamawaki_saito.jpg",
+	840:"/images/butoukai/20130705/murata.jpg",
+	850:"/images/butoukai/20130705/nakai.jpg",
+	860:"/images/butoukai/20130705/wen.jpg",
 };
 
 
