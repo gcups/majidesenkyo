@@ -4,8 +4,10 @@
 //
 // ----------------------------------------------------------------------------------------------
 var express = require('express')
-	, routes = require('./routes');
-var app = module.exports = express.createServer();
+  , routes  = require('./routes')
+  , http    = require('http');
+var app = express(); 
+//var app = module.exports = express.createServer();
 
 
 // ----------------------------------------------------------------------------------------------
@@ -14,6 +16,7 @@ var app = module.exports = express.createServer();
 //
 // ----------------------------------------------------------------------------------------------
 app.configure(function(){
+	app.set('port', process.env.VCAP_APP_PORT || 80);
 	app.set('views', __dirname + '/views');
 	app.set('view engine', 'ejs');
 	app.use(express.bodyParser());
@@ -31,14 +34,18 @@ app.configure('production', function(){
 });
 
 app.get('/', routes.index);
-app.get('/app', routes.app);
+//app.get('/app', routes.app);
 app.get('/detail/', routes.detail);
 app.get('/list/', routes.list);
 app.get('/search/', routes.search);
-app.listen(process.env.VCAP_APP_PORT || 80, function(){
-	console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
-});
 
+/**
+ * Create serve.
+ *
+ */
+var server = http.createServer(app).listen(app.get('port'), function(){
+  console.log("Express server listening on port " + app.get('port'));
+});
 
 // ----------------------------------------------------------------------------------------------
 //
@@ -75,15 +82,15 @@ exports.getMongoConnection = function() {
 // action    :   Socket actions (/detail)
 //
 // ----------------------------------------------------------------------------------------------
-	var io = require('socket.io').listen(app);
-	io.sockets.on('connection', function (socket) {
 
+	var io = require('socket.io').listen(server);
+	io.sockets.on('connection', function (socket) {
 
 		//----------------------------------------------------------------------------------
 		// call "price.add" from client side
 		//----------------------------------------------------------------------------------
 		socket.on('price.add', function(price_data) {
-
+console.log(price_data.id);
 					//-------------------------------------------------------------
 					// Get data from client send data
 					//-------------------------------------------------------------

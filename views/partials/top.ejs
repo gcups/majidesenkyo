@@ -87,7 +87,7 @@ div#slideshow img.last-active { z-index:9; }
                 <div class="top_header">
                     <img src="/images/head_title.png" alt="image" />
                 </div>
-<%- partial('partials/commons/navbar.ejs')%>
+<%- include commons/navbar.ejs %>
                 <div class="top_sections">
 <div id="ad_header">
 <!--
@@ -95,6 +95,14 @@ div#slideshow img.last-active { z-index:9; }
 -->
 <a href="https://cat.infoseek.co.jp/"><img src="/images/butoukai/ad/banner_20130705_2.gif"></a>
 </div>
+                    <h1 class="top_section_title">新サ一武道会</h1>
+                    <div class="top_section">
+<h2>～史上最もシビアなプレゼン大会～</h2>
+<p>勝者を決めるのは、あなた達です！</p>
+<a href="/list/" rel="external"><img src="/images/butoukai/tenkaichi_budokai.jpg" alt="新サ一武道会" /></a>
+<br><br>
+                    </div>
+
                     <h1 class="top_section_title">Tech Talk</h1>
                     <div class="top_section">
 <h2>～CIを極めし者達～</h2>
@@ -141,5 +149,5 @@ div#slideshow img.last-active { z-index:9; }
             </div>
             <div data-role="content" style="padding: 10px">
             </div>
-<%- partial('partials/commons/footer.ejs')%>
+<%- include commons/footer.ejs %>
         </div>

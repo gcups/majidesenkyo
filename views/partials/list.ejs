@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-<%- partial('partials/commons/html_header.ejs')%>
+<%- include commons/html_header.ejs %>
 	<link rel="stylesheet" type="text/css" media="all" href="/stylesheets/list.css">
     </head>
 <body  style="font-family: monospace; width: 315px;" >
@@ -12,7 +12,7 @@
          <div class="top_header">
              <img src="/images/head_title.png" alt="image" />
          </div>
-<%- partial('partials/commons/navbar.ejs')%>
+<%- include commons/navbar.ejs %>
      </div>
   <!-- contents_start *******************************-->
   <div id="contents">
@@ -28,68 +28,68 @@
       <h1>Tech&nbsp;Talk</h1>
     </hgroup>
       <ul class="arrowsNoList">
-        <li>
-          <span class="profPhoto" style="background: url(<%= img[750] %>) no-repeat; background-size:100% auto">
-            <a href="/detail/?id=750" rel="external"><img src="<%= img[750] %>" style="opacity: 0;"></a>
-          </span>
-          <div class="profText">
-            <h3><%= team[750] %></h3>
-            <%- text[750] %><br />
-            <% if (title[750]) { %> 「<%- title[750] %>」<% } %>
-          </div>
-        </li>
-        <li>
-          <span class="profPhoto" style="background: url(<%= img[760] %>) no-repeat; background-size:100% auto">
-            <a href="/detail/?id=760" rel="external"><img src="<%= img[760] %>" style="opacity: 0;"></a>
-          </span>
-          <div class="profText">
-            <h3><%= team[760] %></h3>
-            <%- text[760] %><br />
-            <% if (title[760]) { %> 「<%- title[760] %>」<% } %>
-          </div>
-        </li>
-        <li>
-          <span class="profPhoto" style="background: url(<%= img[770] %>) no-repeat; background-size:100% auto">
-            <a href="/detail/?id=770" rel="external"><img src="<%= img[770] %>" style="opacity: 0;"></a>
-          </span>
-          <div class="profText">
-            <h3><%= team[770] %></h3>
-            <%- text[770] %><br />
-            <% if (title[770]) { %> 「<%- title[770] %>」<% } %>
-          </div>
-        </li>
-        <li>
-          <span class="profPhoto" style="background: url(<%= img[780] %>) no-repeat; background-size:100% auto">
-            <a href="/detail/?id=780" rel="external"><img src="<%= img[780] %>" style="opacity: 0;"></a>
-          </span>
-          <div class="profText">
-            <h3><%= team[780] %></h3>
-            <%- text[780] %><br />
-            <% if (title[780]) { %> 「<%- title[780] %>」<% } %>
-          </div>
-        </li>
 <!--
         <li>
-          <span class="profPhoto" style="background: url(<%= img[850] %>) no-repeat; background-size:100% auto">
-            <a href="/detail/?id=850" rel="external"><img src="<%= img[850] %>" style="opacity: 0;"></a>
+          <span class="profPhoto" style="background: url(<%= img[910] %>) no-repeat; background-size:100% auto">
+            <a href="/detail/?id=910" rel="external"><img src="<%= img[910] %>" style="opacity: 0;"></a>
           </span>
           <div class="profText">
-            <h3><%= team[850] %></h3>
-            <%- text[850] %><br />
-            <% if (title[850]) { %> 「<%- title[850] %>」<% } %>
-          </div>
-        </li>
-        <li>
-          <span class="profPhoto" style="background: url(<%= img[860] %>) no-repeat; background-size:100% auto">
-            <a href="/detail/?id=860" rel="external"><img src="<%= img[860] %>" style="opacity: 0;"></a>
-          </span>
-          <div class="profText">
-            <h3><%= team[860] %></h3>
-            <%- text[860] %><br />
-            <% if (title[860]) { %> 「<%- title[860] %>」<% } %>
+            <h3><%= team[910] %></h3>
+            <%- text[910] %><br />
+            <% if (title[910]) { %> 「<%- title[910] %>」<% } %>
           </div>
         </li>
 -->
+        <li>
+          <span class="profPhoto" style="background: url(<%= img[920] %>) no-repeat; background-size:100% auto">
+            <a href="/detail/?id=920" rel="external"><img src="<%= img[920] %>" style="opacity: 0;"></a>
+          </span>
+          <div class="profText">
+            <h3><%= team[920] %></h3>
+            <%- text[920] %><br />
+            <% if (title[920]) { %> 「<%- title[920] %>」<% } %>
+          </div>
+        </li>
+        <li>
+          <span class="profPhoto" style="background: url(<%= img[930] %>) no-repeat; background-size:100% auto">
+            <a href="/detail/?id=930" rel="external"><img src="<%= img[930] %>" style="opacity: 0;"></a>
+          </span>
+          <div class="profText">
+            <h3><%= team[930] %></h3>
+            <%- text[930] %><br />
+            <% if (title[930]) { %> 「<%- title[930] %>」<% } %>
+          </div>
+        </li>
+        <li>
+          <span class="profPhoto" style="background: url(<%= img[940] %>) no-repeat; background-size:100% auto">
+            <a href="/detail/?id=940" rel="external"><img src="<%= img[940] %>" style="opacity: 0;"></a>
+          </span>
+          <div class="profText">
+            <h3><%= team[940] %></h3>
+            <%- text[940] %><br />
+            <% if (title[940]) { %> 「<%- title[940] %>」<% } %>
+          </div>
+        </li>
+        <li>
+          <span class="profPhoto" style="background: url(<%= img[950] %>) no-repeat; background-size:100% auto">
+            <a href="/detail/?id=950" rel="external"><img src="<%= img[950] %>" style="opacity: 0;"></a>
+          </span>
+          <div class="profText">
+            <h3><%= team[950] %></h3>
+            <%- text[950] %><br />
+            <% if (title[950]) { %> 「<%- title[950] %>」<% } %>
+          </div>
+        </li>
+        <li>
+          <span class="profPhoto" style="background: url(<%= img[960] %>) no-repeat; background-size:100% auto">
+            <a href="/detail/?id=960" rel="external"><img src="<%= img[960] %>" style="opacity: 0;"></a>
+          </span>
+          <div class="profText">
+            <h3><%= team[960] %></h3>
+            <%- text[960] %><br />
+            <% if (title[960]) { %> 「<%- title[960] %>」<% } %>
+          </div>
+        </li>
       </ul>
 <div id="ad_footer">
 <img src="/images/butoukai/ad/banner_20130405.png">
@@ -99,7 +99,7 @@
   
   </div>
   <!-- contents_end  --> 
-<%- partial('partials/commons/footer.ejs')%>
+<%- include commons/footer.ejs %>
 </div>
 
     </body>

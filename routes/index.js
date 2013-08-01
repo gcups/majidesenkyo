@@ -14,31 +14,35 @@ var appJS = require('../app.js');
 //
 // ----------------------------------------------------------------------------------------------
 var teamList = {
-	750:"Demo",
-	760:"Xuebin Ma",
-	770:"Miki Matsumoto",
-	780:"Hirobumi Takahashi",
+	920:"ME",
+	930:"NSYS",
+	940:"COM",
+	950:"TS",
+	960:"LM",
 };
 
 var textList = {
-	750:"(DEMO)",
-	760:"(DAD)",
-	770:"(BDD)",
-	780:"(DAD)",
+	920:"当麻 真悟",
+	930:"佐藤 寛貴",
+	940:"松嶋 克仁",
+	950:"大西 信寛",
+	960:"田浦 康一",
 };
 
 var titleList = {
-	750:"Demo",
-	760:"Shared&nbsp;Jenkins",
-	770:"Lone-wolf&nbsp;Jenkins",
-	780:"Shared&nbsp;Bamboo",
+	920:"INTRO NEKO",
+	930:"NSYS 戻ってきたお<br>（´・ω・｀）<br>-僕はNSYS命ですよ （棒）-",
+	940:"マジで総選挙<br>Androidネイティブアプリ",
+	950:"安西先生、<br>エルミートやばいです",
+	960:"進撃の巨人<br>(attack on taulin)",
 };
 
 var imgList = {
-	750:"/big_data/20130710/images/demo.jpg",
-	760:"/big_data/20130710/images/01_jenkins_shared.jpg",
-	770:"/big_data/20130710/images/02_jenkins_lonewolf.jpg",
-	780:"/big_data/20130710/images/03_bamboo_shared.jpg",
+	920:"/images/butoukai/20130802/toma.jpg",
+	930:"/images/butoukai/20130802/sato.gif",
+	940:"/images/butoukai/20130802/matsushima.jpg",
+	950:"/images/butoukai/20130802/onishi.jpg",
+	960:"/images/butoukai/20130802/taura.jpg",
 };
 
 

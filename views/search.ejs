@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-<%- partial('partials/commons/html_header.ejs')%>
+<%- include partials/commons/html_header.ejs %>
 	<link rel="stylesheet" type="text/css" media="all" href="/stylesheets/list.css">
     </head>
 <body style="font-family: monospace;" >
@@ -18,7 +18,7 @@
          <div class="top_header">
              <img src="/images/head_title.png" alt="image" />
          </div>
-<%- partial('partials/commons/navbar.ejs')%>
+<%- include partials/commons/navbar.ejs %>
      </div>
   <!-- contents_start *******************************-->
   <div id="contents">
@@ -51,7 +51,7 @@
   
   </div>
   <!-- contents_end  --> 
-<%- partial('partials/commons/footer.ejs')%>
+<%- include partials/commons/footer.ejs %>
 </div>
 
     </body>
