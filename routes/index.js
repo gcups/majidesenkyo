@@ -145,7 +145,7 @@ exports.list = function(req, res){
 		team:  teamList,
 		title: titleList,
 		text:  textList,
-		indexList: indexList
+		indeies: indexList
 	});
 }
 
