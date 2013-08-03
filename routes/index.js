@@ -13,6 +13,28 @@ var appJS = require('../app.js');
 //  defines
 //
 // ----------------------------------------------------------------------------------------------
+var indexList = {
+		1010,
+		1020,
+		1030,
+		1040,
+		1050,
+		1060,
+		1070,
+		1080,
+		1090,
+		1100,
+		1110,
+		1120,
+		1130,
+		1140,
+		1150,
+		1160,
+		1170,
+		1180,
+};
+
+
 var teamList = {
 		1010:"",
 		1020:"",
@@ -122,7 +144,8 @@ exports.list = function(req, res){
 		img:   imgList,
 		team:  teamList,
 		title: titleList,
-		text:  textList
+		text:  textList,
+		indexList: indexList
 	});
 }
 
