@@ -28,77 +28,28 @@
       <h1>&nbsp;新サ一武道会</h1>
     </hgroup>
       <ul class="arrowsNoList">
-<!--
+
+<% for(var i=1010; i<teamList.length; i += 10) {%>
         <li>
-          <span class="profPhoto" style="background: url(<%= img[910] %>) no-repeat; background-size:100% auto">
-            <a href="/detail/?id=910" rel="external"><img src="<%= img[910] %>" style="opacity: 0;"></a>
+          <span class="profPhoto" style="background: url(<%= img[i] %>) no-repeat; background-size:100% auto">
+            <a href="/detail/?id=i" rel="external"><img src="<%= img[i] %>" style="opacity: 0;"></a>
           </span>
           <div class="profText">
-            <h3><%= team[910] %></h3>
-            <%- text[910] %><br />
-            <% if (title[910]) { %> 「<%- title[910] %>」<% } %>
+            <h3><%= team[i] %></h3>
+            <%- text[i] %><br />
+            <% if (title[i]) { %> 「<%- title[i] %>」<% } %>
           </div>
         </li>
--->
-        <li>
-          <span class="profPhoto" style="background: url(<%= img[920] %>) no-repeat; background-size:100% auto">
-            <a href="/detail/?id=920" rel="external"><img src="<%= img[920] %>" style="opacity: 0;"></a>
-          </span>
-          <div class="profText">
-            <h3><%= team[920] %></h3>
-            <%- text[920] %><br />
-            <% if (title[920]) { %> 「<%- title[920] %>」<% } %>
-          </div>
-        </li>
-        <li>
-          <span class="profPhoto" style="background: url(<%= img[930] %>) no-repeat; background-size:100% auto">
-            <a href="/detail/?id=930" rel="external"><img src="<%= img[930] %>" style="opacity: 0;"></a>
-          </span>
-          <div class="profText">
-            <h3><%= team[930] %></h3>
-            <%- text[930] %><br />
-            <% if (title[930]) { %> 「<%- title[930] %>」<% } %>
-          </div>
-        </li>
-        <li>
-          <span class="profPhoto" style="background: url(<%= img[940] %>) no-repeat; background-size:100% auto">
-            <a href="/detail/?id=940" rel="external"><img src="<%= img[940] %>" style="opacity: 0;"></a>
-          </span>
-          <div class="profText">
-            <h3><%= team[940] %></h3>
-            <%- text[940] %><br />
-            <% if (title[940]) { %> 「<%- title[940] %>」<% } %>
-          </div>
-        </li>
-        <li>
-          <span class="profPhoto" style="background: url(<%= img[950] %>) no-repeat; background-size:100% auto">
-            <a href="/detail/?id=950" rel="external"><img src="<%= img[950] %>" style="opacity: 0;"></a>
-          </span>
-          <div class="profText">
-            <h3><%= team[950] %></h3>
-            <%- text[950] %><br />
-            <% if (title[950]) { %> 「<%- title[950] %>」<% } %>
-          </div>
-        </li>
-        <li>
-          <span class="profPhoto" style="background: url(<%= img[960] %>) no-repeat; background-size:100% auto">
-            <a href="/detail/?id=960" rel="external"><img src="<%= img[960] %>" style="opacity: 0;"></a>
-          </span>
-          <div class="profText">
-            <h3><%= team[960] %></h3>
-            <%- text[960] %><br />
-            <% if (title[960]) { %> 「<%- title[960] %>」<% } %>
-          </div>
-        </li>
+<% } %>
       </ul>
 <div id="ad_footer">
 <a href="http://www.fujitv.co.jp/shomu2/index.html" target="blank"><img src="/images/butoukai/ad/banner_20130802_2.png"></a>
 </div>
   </div>
 </section>
-  
+
   </div>
-  <!-- contents_end  --> 
+  <!-- contents_end  -->
 <%- include commons/footer.ejs %>
 </div>
 
