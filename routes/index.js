@@ -13,6 +13,20 @@ var appJS = require('../app.js');
 //  defines
 //
 // ----------------------------------------------------------------------------------------------
+/**
+ * Android Application config
+ */
+var clientApplicationConfigs = {
+		/**
+		 * Room ID
+		 * 1: NewSD1 Shinsaichi Budokai（新サ一武道会）
+		 * 2: Allows LT
+		 */
+		roomId : 2
+}
+/**
+ * Condidates Data
+ */
 var candidates = {
 		1200: {teamName : "",
 		       name     : "デモ",
@@ -147,7 +161,7 @@ exports.api_10_userlist_show = function(req, res){
 	for(var id in candidates) {
 		result["items"].push({
 			userId   : id,
-			roomId   : 1,
+			roomId   : clientApplicationConfigs["roomId"],
 			name     : candidates[id]["name"],
 			group    : candidates[id]["team"],
 			title    : candidates[id]["title"],
