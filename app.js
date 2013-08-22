@@ -38,6 +38,7 @@ app.get('/', routes.index);
 app.get('/detail/', routes.detail);
 app.get('/list/', routes.list);
 app.get('/search/', routes.search);
+app.get('/api/1.0/userlist/show', routes.api_10_userlist_show);
 
 /**
  * Create serve.

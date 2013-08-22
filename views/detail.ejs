@@ -120,8 +120,8 @@ div#page1 .message_board_title {
 			<div class="img_section">
 				<img id="img" src="<%= get_img %>" alt="image" />
 			</div>
-				<h3><%= team %></h3>
-				<%- text %><br />
+				<h3><%- name %></h3>
+				<% if (team) { %><%= team %><br /><% } %>
 				<% if (title) { %> 「<%- title %>」<% } %>
 			<div class="result">
 			<div class="img_comment3" >Pt</div>

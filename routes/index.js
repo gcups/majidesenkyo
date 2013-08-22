@@ -13,37 +13,32 @@ var appJS = require('../app.js');
 //  defines
 //
 // ----------------------------------------------------------------------------------------------
-var teamList = {
-	920:"ME",
-	930:"NSYS",
-	940:"COM",
-	950:"TS",
-	960:"LM",
-};
-
-var textList = {
-	920:"当麻 真悟",
-	930:"佐藤 寛貴",
-	940:"松嶋 克仁",
-	950:"大西 信寛",
-	960:"田浦 康一",
-};
-
-var titleList = {
-	920:"INTRO NEKO",
-	930:"NSYS 戻ってきたお<br>（´・ω・｀）<br>-僕はNSYS命ですよ （棒）-",
-	940:"マジで総選挙<br>Androidネイティブアプリ",
-	950:"安西先生、<br>エルミートやばいです",
-	960:"進撃の巨人<br>(attack on taulin)",
-};
-
-var imgList = {
-	920:"/images/butoukai/20130802/toma.jpg",
-	930:"/images/butoukai/20130802/sato.gif",
-	940:"/images/butoukai/20130802/matsushima.jpg",
-	950:"/images/butoukai/20130802/onishi.jpg",
-	960:"/images/butoukai/20130802/taura.jpg",
-};
+var candidates = {
+		1100: {teamName : "",
+		       name     : "デモ",
+		       title    : "デモ投票",
+		       img      : "/images/butoukai/demo.jpg"},
+		1110: {teamName : "",
+		       name     : "長谷川 剛",
+		       title    : "どうだったの？ネット選挙",
+		       img      : "/allows/20130823_lt/1_hasegawa.jpg"},
+		1120: {teamName : "",
+		       name     : "新倉 直明",
+		       title    : "社会人として必要な知識持ってますか？",
+		       img      : "/allows/20130823_lt/2_nikura.jpg"},
+		1130: {teamName : "",
+		       name     : "大森 翔太",
+		       title    : "窓8はそんなに悪くない",
+		       img      : "/allows/20130823_lt/3_omori.png"},
+		1140: {teamName : "",
+		       name     : "宮崎 剛太",
+		       title    : "「夏休み 自由研究」 6年2組 みやざきごうた",
+		       img      : "/allows/20130823_lt/4_miyazaki.jpg"},
+		1150: {teamName : "",
+		       name     : "青木 健浩",
+		       title    : "FlashAirで遊ぼう ～ 夏休みの自由研究",
+		       img      : "/allows/20130823_lt/5_aoki.png"},
+}
 
 
 // ----------------------------------------------------------------------------------------------
@@ -67,10 +62,7 @@ exports.index = function(req, res){
 // ----------------------------------------------------------------------------------------------
 exports.list = function(req, res){
 	res.render('partials/list', {
-		img:   imgList,
-		team:  teamList,
-		title: titleList,
-		text:  textList
+		candidates: candidates
 	});
 }
 
@@ -127,12 +119,40 @@ exports.detail = function(req, res){
 		// Call view page
 		//-------------------------------------------------------------
 		res.render('detail', {
-			team:    teamList[id],
-			title:   titleList[id],
-			text:    textList[id],
-			get_img: imgList[id],
+			team:    candidates[id]["teamName"],
+			title:   candidates[id]["title"],
+			name:    candidates[id]["name"],
+			get_img: candidates[id]["img"],
 			get_price: p_result,
 			get_id: id
 		});
 	});
 };
+
+
+// ----------------------------------------------------------------------------------------------
+//
+//  /api_10_userlist_show
+//
+// ----------------------------------------------------------------------------------------------
+exports.api_10_userlist_show = function(req, res){
+	var result = {
+		status: {
+			code: 200,
+			messages: null,
+			version: "1.0"
+		},
+		items: []
+	};
+	for(var id in candidates) {
+		result["items"].push({
+			userId   : id,
+			roomId   : 1,
+			name     : candidates[id]["name"],
+			group    : candidates[id]["team"],
+			title    : candidates[id]["title"],
+			imageUrl : candidates[id]["img"],
+		});
+	}
+	res.end(JSON.stringify(result));
+}
