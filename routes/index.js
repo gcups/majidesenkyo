@@ -13,111 +13,32 @@ var appJS = require('../app.js');
 //  defines
 //
 // ----------------------------------------------------------------------------------------------
-var indexList = [
-		1010,
-		1020,
-		1030,
-		1040,
-		1050,
-		1060,
-		1070,
-		1080,
-		1090,
-		1100,
-		1110,
-		1120,
-		1130,
-		1140,
-		1150,
-		1160,
-		1170,
-		1180
-];
-
-
-var teamList = {
-		1010:"",
-		1020:"",
-		1030:"",
-		1040:"",
-		1050:"",
-		1060:"",
-		1070:"",
-		1080:"",
-		1090:"",
-		1100:"",
-		1110:"",
-		1120:"",
-		1130:"",
-		1140:"",
-		1150:"",
-		1160:"",
-		1170:"",
-		1180:"",
-};
-
-var textList = {
-		1010:"およべちゃん",
-		1020:"チーム卑猥",
-		1030:"きじー",
-		1040:"Meena Bhoor",
-		1050:"Agarwal Ankit",
-		1060:"sawa",
-		1070:"からあげさん",
-		1080:"むらたっち",
-		1090:"たかひろ",
-		1100:"あじさん",
-		1110:"たかはし",
-		1120:"やまき",
-		1130:"かじ",
-		1140:"もりき",
-		1150:"ほんま",
-		1160:"たかまう",
-		1170:"チームへたれ",
-		1180:"チームテキサス",
-};
-
-var titleList = {
-		1010:"",
-		1020:"",
-		1030:"",
-		1040:"",
-		1050:"",
-		1060:"",
-		1070:"",
-		1080:"",
-		1090:"",
-		1100:"",
-		1110:"",
-		1120:"",
-		1130:"",
-		1140:"",
-		1150:"",
-		1160:"",
-		1170:"",
-		1180:"",
-};
-
-var imgList = {
-		1010:"/images/butoukai/20130803/oyo.jpg",
-		1020:"/images/butoukai/20130803/hiwai.jpg",
-		1030:"/images/butoukai/20130803/kijima.jpg",
-		1040:"/images/butoukai/20130803/Bhoor.jpg",
-		1050:"/images/butoukai/20130803/Ankit.jpg",
-		1060:"/images/butoukai/20130803/sawa.jpg",
-		1070:"/images/butoukai/20130803/karaage.jpg",
-		1080:"/images/butoukai/20130803/murata.jpg",
-		1090:"/images/butoukai/20130803/hirotaka.jpg",
-		1100:"/images/butoukai/20130803/aji.jpg",
-		1110:"/images/butoukai/20130803/takahashi.jpg",
-		1120:"/images/butoukai/20130803/yamaki.jpg",
-		1130:"/images/butoukai/20130803/kajihara.jpg",
-		1140:"/images/butoukai/20130803/moriki.jpg",
-		1150:"/images/butoukai/20130803/maro.jpg",
-		1160:"/images/butoukai/20130803/takamario.jpg",
-		1170:"/images/butoukai/20130803/チームへたれ.jpg",
-		1180:"/images/butoukai/20130803/otsukare.jpg",
-};
+var candidates = {
+		1100: {teamName : "",
+		       name     : "デモ",
+		       title    : "デモ投票",
+		       img      : "/images/butoukai/demo.jpg"},
+		1110: {teamName : "",
+		       name     : "長谷川 剛",
+		       title    : "どうだったの？ネット選挙",
+		       img      : "/allows/20130823_lt/1_hasegawa.jpg"},
+		1120: {teamName : "",
+		       name     : "新倉 直明",
+		       title    : "社会人として必要な知識持ってますか？",
+		       img      : "/allows/20130823_lt/2_nikura.jpg"},
+		1130: {teamName : "",
+		       name     : "大森 翔太",
+		       title    : "窓8はそんなに悪くない",
+		       img      : "/allows/20130823_lt/3_omori.png"},
+		1140: {teamName : "",
+		       name     : "宮崎 剛太",
+		       title    : "「夏休み 自由研究」 6年2組 みやざきごうた",
+		       img      : "/allows/20130823_lt/4_miyazaki.jpg"},
+		1150: {teamName : "",
+		       name     : "青木 健浩",
+		       title    : "FlashAirで遊ぼう ～ 夏休みの自由研究",
+		       img      : "/allows/20130823_lt/5_aoki.png"},
+}
 
 
 // ----------------------------------------------------------------------------------------------
@@ -141,11 +62,7 @@ exports.index = function(req, res){
 // ----------------------------------------------------------------------------------------------
 exports.list = function(req, res){
 	res.render('partials/list', {
-		img:   imgList,
-		team:  teamList,
-		title: titleList,
-		text:  textList,
-		indeies: indexList
+		candidates: candidates
 	});
 }
 
@@ -202,12 +119,40 @@ exports.detail = function(req, res){
 		// Call view page
 		//-------------------------------------------------------------
 		res.render('detail', {
-			team:    teamList[id],
-			title:   titleList[id],
-			text:    textList[id],
-			get_img: imgList[id],
+			team:    candidates[id]["teamName"],
+			title:   candidates[id]["title"],
+			name:    candidates[id]["name"],
+			get_img: candidates[id]["img"],
 			get_price: p_result,
 			get_id: id
 		});
 	});
 };
+
+
+// ----------------------------------------------------------------------------------------------
+//
+//  /api_10_userlist_show
+//
+// ----------------------------------------------------------------------------------------------
+exports.api_10_userlist_show = function(req, res){
+	var result = {
+		status: {
+			code: 200,
+			messages: null,
+			version: "1.0"
+		},
+		items: []
+	};
+	for(var id in candidates) {
+		result["items"].push({
+			userId   : id,
+			roomId   : 1,
+			name     : candidates[id]["name"],
+			group    : candidates[id]["team"],
+			title    : candidates[id]["title"],
+			imageUrl : candidates[id]["img"],
+		});
+	}
+	res.end(JSON.stringify(result));
+}
