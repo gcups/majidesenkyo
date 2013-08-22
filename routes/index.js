@@ -13,28 +13,42 @@ var appJS = require('../app.js');
 //  defines
 //
 // ----------------------------------------------------------------------------------------------
+/**
+ * Android Application config
+ */
+var clientApplicationConfigs = {
+		/**
+		 * Room ID
+		 * 1: NewSD1 Shinsaichi Budokai（新サ一武道会）
+		 * 2: Allows LT
+		 */
+		roomId : 2
+}
+/**
+ * Condidates Data
+ */
 var candidates = {
-		1100: {teamName : "",
+		1200: {teamName : "",
 		       name     : "デモ",
 		       title    : "デモ投票",
 		       img      : "/images/butoukai/demo.jpg"},
-		1110: {teamName : "",
+		1210: {teamName : "",
 		       name     : "長谷川 剛",
 		       title    : "どうだったの？ネット選挙",
 		       img      : "/allows/20130823_lt/1_hasegawa.jpg"},
-		1120: {teamName : "",
+		1220: {teamName : "",
 		       name     : "新倉 直明",
 		       title    : "社会人として必要な知識持ってますか？",
 		       img      : "/allows/20130823_lt/2_nikura.jpg"},
-		1130: {teamName : "",
+		1230: {teamName : "",
 		       name     : "大森 翔太",
 		       title    : "窓8はそんなに悪くない",
 		       img      : "/allows/20130823_lt/3_omori.png"},
-		1140: {teamName : "",
+		1240: {teamName : "",
 		       name     : "宮崎 剛太",
 		       title    : "「夏休み 自由研究」 6年2組 みやざきごうた",
 		       img      : "/allows/20130823_lt/4_miyazaki.jpg"},
-		1150: {teamName : "",
+		1250: {teamName : "",
 		       name     : "青木 健浩",
 		       title    : "FlashAirで遊ぼう ～ 夏休みの自由研究",
 		       img      : "/allows/20130823_lt/5_aoki.png"},
@@ -147,7 +161,7 @@ exports.api_10_userlist_show = function(req, res){
 	for(var id in candidates) {
 		result["items"].push({
 			userId   : id,
-			roomId   : 1,
+			roomId   : clientApplicationConfigs["roomId"],
 			name     : candidates[id]["name"],
 			group    : candidates[id]["team"],
 			title    : candidates[id]["title"],
