@@ -28,16 +28,15 @@
       <h1>&nbsp;新サ一武道会</h1>
     </hgroup>
       <ul class="arrowsNoList">
-
-<% for(var i in img) {%>
+<% for(var id in candidates) {%>
         <li>
-          <span class="profPhoto" style="background: url(<%= img[i] %>) no-repeat; background-size:100% auto">
-            <a href="/detail/?id=<%= i %>" rel="external"><img src="<%= img[i] %>" style="opacity: 0;"></a>
+          <span class="profPhoto" style="background: url(<%= candidates[id]["img"] %>) no-repeat; background-size:100% auto">
+            <a href="/detail/?id=<%= id %>" rel="external"><img src="<%= candidates[id]["img"] %>" style="opacity: 0;"></a>
           </span>
           <div class="profText">
-            <h3><%= team[i] %></h3>
-            <%- text[i] %><br />
-            <% if (title[i]) { %> 「<%- title[i] %>」<% } %>
+            <h3><%- candidates[id]["name"] %></h3>
+            <% if (candidates[id]["team"]) { %><%= candidates[id]["team"] %><br /><% } %>
+            <% if (candidates[id]["title"]) { %> 「<%- candidates[id]["title"] %>」<% } %>
           </div>
         </li>
 <% } %>
