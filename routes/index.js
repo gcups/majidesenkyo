@@ -165,8 +165,10 @@ exports.api_10_userlist_show = function(req, res){
 			name     : candidates[id]["name"],
 			group    : candidates[id]["team"],
 			title    : candidates[id]["title"],
-			imageUrl : candidates[id]["img"],
+			imageUrl : "http://gcups.c.node-ninja.com" + candidates[id]["img"],
 		});
 	}
+	res.charset = 'utf-8';
+	res.contentType('application/json');
 	res.end(JSON.stringify(result));
 }
