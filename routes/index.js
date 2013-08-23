@@ -46,7 +46,7 @@ var candidates = {
 		       img      : "/allows/20130823_lt/3_omori.png"},
 		1240: {teamName : "",
 		       name     : "宮崎 剛太",
-		       title    : "「夏休み 自由研究」 6年2組 みやざきごうた",
+		       title    : "図面・工作　夏休みの宿題",
 		       img      : "/allows/20130823_lt/4_miyazaki.jpg"},
 		1250: {teamName : "",
 		       name     : "青木 健浩",
