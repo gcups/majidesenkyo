@@ -22,7 +22,9 @@ var clientApplicationConfigs = {
 		 * 1: NewSD1 Shinsaichi Budokai（新サ一武道会）
 		 * 2: Allows LT
 		 */
-		roomId : 2
+		roomId : 1,
+        startDate : 2013/08/28 00:00,
+        endDate : 2013/08/28 23:59
 }
 /**
  * Condidates Data
@@ -30,7 +32,7 @@ var clientApplicationConfigs = {
 var candidates = {
 		1200: {teamName : "",
 		       name     : "デモ",
-		       title    : "デモ投票",
+		       title    : "デモ投票用",
 		       img      : "/images/butoukai/demo.jpg"},
 		1210: {teamName : "",
 		       name     : "長谷川 剛",
@@ -160,12 +162,14 @@ exports.api_10_userlist_show = function(req, res){
 	};
 	for(var id in candidates) {
 		result["items"].push({
-			userId   : id,
-			roomId   : clientApplicationConfigs["roomId"],
-			name     : candidates[id]["name"],
-			group    : candidates[id]["team"],
-			title    : candidates[id]["title"],
-			imageUrl : "http://gcups.c.node-ninja.com" + candidates[id]["img"],
+			userId    : id,
+			roomId    : clientApplicationConfigs["roomId"],
+			startDate : clientApplicationConfigs["startDate"],
+			endDate   : clientApplicationConfigs["endDate"],
+			name      : candidates[id]["name"],
+			group     : candidates[id]["team"],
+			title     : candidates[id]["title"],
+			imageUrl  : "http://gcups.c.node-ninja.com" + candidates[id]["img"],
 		});
 	}
 	res.charset = 'utf-8';
