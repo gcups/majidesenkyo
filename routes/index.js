@@ -23,39 +23,42 @@ var clientApplicationConfigs = {
 		 * 2: Allows LT
 		 */
 		roomId : 1,
-        startDate : "2013/08/28 00:00",
-        endDate : "2013/08/28 23:59"
+		startDate : "2013/09/06 12:00",
+		endDate : "2013/09/06 23:59"
 }
 /**
  * Condidates Data
  */
 var candidates = {
-		1200: {teamName : "",
+		1300: {teamName : "Demo",
 		       name     : "!デモ!",
 		       title    : "デモ投票用",
 		       img      : "/images/butoukai/demo.jpg"},
-		1210: {teamName : "",
-		       name     : "長谷川 剛",
-		       title    : "どうだったの？ネット選挙",
-		       img      : "/allows/20130823_lt/1_hasegawa.jpg"},
-		1220: {teamName : "",
-		       name     : "新倉 直明",
-		       title    : "社会人として必要な知識持ってますか？",
-		       img      : "/allows/20130823_lt/2_nikura.jpg"},
-		1230: {teamName : "",
-		       name     : "大森 翔太",
-		       title    : "窓8はそんなに悪くない",
-		       img      : "/allows/20130823_lt/3_omori.png"},
-		1240: {teamName : "",
-		       name     : "宮崎 剛太",
-		       title    : "図面・工作　夏休みの宿題",
-		       img      : "/allows/20130823_lt/4_miyazaki.jpg"},
-		1250: {teamName : "",
-		       name     : "青木 健浩",
-		       title    : "FlashAirで遊ぼう ～ 夏休みの自由研究",
-		       img      : "/allows/20130823_lt/5_aoki.png"},
+		1310: {teamName : "Guest",
+		       name     : "松江 宏樹",
+		       title    : "ハッカソンのすすめ",
+		       img      : "/images/butoukai/20130906/matsue.png"},
+		1320: {teamName : "COM",
+		       name     : "小松 真",
+		       title    : "アプリのレビュー解析",
+		       img      : "/images/butoukai/20130906/komatsu.jpg"},
+		1330: {teamName : "ME",
+		       name     : "紙谷 知弘",
+		       title    : "ぱいぱい。",
+		       img      : "/images/butoukai/20130906/kamitani.jpg"},
+		1340: {teamName : "NSYS",
+		       name     : "齋藤 淳",
+		       title    : "Introduction of Oracle Exadata Platform",
+		       img      : "/images/butoukai/20130906/saito.jpg"},
+		1350: {teamName : "LM",
+		       name     : "及部 敬雄",
+		       title    : "Confluenceを救う会",
+		       img      : "/images/butoukai/20130906/oyobe.jpg"},
+		1360: {teamName : "TS",
+		       name     : "川原 英明",
+		       title    : "30周年だからこそ、あの事を語ろう！<br>～素晴らしきムダ知識～",
+		       img      : "/images/butoukai/20130906/kawahara.jpg"},
 }
-
 
 // ----------------------------------------------------------------------------------------------
 //
@@ -135,7 +138,7 @@ exports.detail = function(req, res){
 		// Call view page
 		//-------------------------------------------------------------
 		res.render('detail', {
-			team:    candidates[id]["teamName"],
+			teamName:    candidates[id]["teamName"],
 			title:   candidates[id]["title"],
 			name:    candidates[id]["name"],
 			get_img: candidates[id]["img"],
