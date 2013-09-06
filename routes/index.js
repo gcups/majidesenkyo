@@ -31,7 +31,7 @@ var clientApplicationConfigs = {
  */
 var candidates = {
 		1200: {teamName : "",
-		       name     : "デモ",
+		       name     : "!デモ!",
 		       title    : "デモ投票用",
 		       img      : "/images/butoukai/demo.jpg"},
 		1210: {teamName : "",
