@@ -1,0 +1,120 @@
+<script type="text/javascript">
+   function slideSwitch() {
+       var $active = $('#slideshow img.active');
+       if ( $active.length == 0 ) $active = $('#slideshow img:last');
+       var $next =  $active.next().length ? $active.next() : $('#slideshow img:first');
+       $active.addClass('last-active');
+       $next.css({opacity: 0.0})
+           .addClass('active')
+           .animate({opacity: 1.0}, 1000, function() {
+               $active.removeClass('active last-active');
+         });
+   }
+   $(function() {
+       setInterval( "slideSwitch()", 3500 );
+   });
+</script>
+<style>
+div#page1 .top_header {
+    width: 315px;
+    height: 80px;
+    position: relative;
+    background: url('/images/head_bg.jpg');
+    border: 0px solid #b8b8b8;
+}
+div#page1 p, h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+div#page1 h1 {
+    padding: 7px 0 5px 5px;
+    font-size: 20px;   
+    text-align: center;
+}
+div#page1 h2 {
+    padding: 5px 0;
+    font-size: 16px; 
+    text-align: center;
+}
+div#page1 .top_sections {
+    width: 315px;
+    position: relative;
+}
+div#page1 .top_section {
+    width: 100%;
+    padding: 0 0 10px 0;
+}
+div#page1 .top_section_title {
+    background: url('/images/title_bar_bg.png');
+    font-size: 20pt;
+}
+div#local_idle {
+    width: 300px;
+    height: 100px;
+    background: url('/images/Japan.gif');
+}
+.kirakira {
+    height: 32px;
+    background: url("/images/kirakira.jpg");
+}
+.heart {
+    height: 32px;
+    background: url("/images/heart.jpg");
+}
+.ad_text {
+    line-height: 1.5em;
+    font-weight: bold;
+}
+.ad_img {
+    margin: 10px 0 0 0;
+}
+.ad_map {
+    margin: 10px 0 0 0;
+}
+.ad_map .ad_map_name {
+    font-weight: bold;
+}
+.ad_map .ad_map_google {
+    width: 300px;
+    height: 300px;
+}
+div#slideshow { position:relative; width:320px; height:180px; }
+div#slideshow img { position:absolute; top:0; left:0; z-index:8; }
+div#slideshow img.active { z-index:10; }
+div#slideshow img.last-active { z-index:9; }
+</style>
+        <div data-role="page" data-theme="e" id="page1">
+            <div data-theme="e" data-role="header">
+                <div data-theme="e" data-role="header">
+                </div>
+                <div class="top_header">
+                    <img src="/images/head_title.png" alt="image" />
+                </div>
+<%- include ../../../partials/commons/navbar.ejs %>
+                <div class="top_sections">
+                    <h1 class="top_section_title">LM運動部</h1>
+                    <div class="top_section">
+<h2></h2>
+<div class="ad_text">
+マッスル丹野を中心に活動しているLM運動部。<br>
+LMとついていますが、来るもの拒まず去るもの追わずのなまやさしい部活です。<br>
+フットサル・テニス・合宿なんでもやるので興味ある方はぜひ入部してください。<br>
+参加するとバナーのような淡い青春体験ができるかもしれません。<br>
+今なら入会無料！！<br>
+</div>
+<div class="ad_img">
+<img src="/images/butoukai/ad/banner_20131005_2.png" style="width: 100%;">
+</div>
+<div class="ad_map">
+<h2>八潮北公園テニスコート<h2>
+<div class="ad_map_google">
+<iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.jp/maps?f=q&amp;source=s_q&amp;hl=ja&amp;geocode=&amp;q=%E5%85%AB%E6%BD%AE%E5%85%AC%E5%9C%92%E3%83%86%E3%83%8B%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%88&amp;aq=&amp;sll=35.604,139.752149&amp;sspn=0.026798,0.038581&amp;gl=jp&amp;brcurrent=3,0x601861dd96beb599:0xd0dc20fd520491ab,0&amp;ie=UTF8&amp;hq=%E5%85%AC%E5%9C%92%E3%83%86%E3%83%8B%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%88&amp;hnear=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%93%81%E5%B7%9D%E5%8C%BA%E5%85%AB%E6%BD%AE&amp;t=m&amp;cid=11015010162204930651&amp;ll=35.613,139.75399&amp;spn=0.020933,0.025749&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.jp/maps?f=q&amp;source=embed&amp;hl=ja&amp;geocode=&amp;q=%E5%85%AB%E6%BD%AE%E5%85%AC%E5%9C%92%E3%83%86%E3%83%8B%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%88&amp;aq=&amp;sll=35.604,139.752149&amp;sspn=0.026798,0.038581&amp;gl=jp&amp;brcurrent=3,0x601861dd96beb599:0xd0dc20fd520491ab,0&amp;ie=UTF8&amp;hq=%E5%85%AC%E5%9C%92%E3%83%86%E3%83%8B%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%88&amp;hnear=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%93%81%E5%B7%9D%E5%8C%BA%E5%85%AB%E6%BD%AE&amp;t=m&amp;cid=11015010162204930651&amp;ll=35.613,139.75399&amp;spn=0.020933,0.025749&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">大きな地図で見る</a></small>
+</div>
+</div>
+                    </div>
+                </div>
+            </div>
+            <div data-role="content" style="padding: 10px">
+            </div>
+<%- include ../../../partials/commons/footer.ejs %>
+        </div>

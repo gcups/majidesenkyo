@@ -40,6 +40,8 @@ app.get('/detail/', routes.detail);
 app.get('/list/', routes.list);
 app.get('/search/', routes.search);
 app.get('/api/1.0/userlist/show', routes.api_10_userlist_show);
+// AD
+app.get('/ad/2013/10/lm_sports_club', routes.ad_lm_sports_club);
 
 /**
  * Create serve.
