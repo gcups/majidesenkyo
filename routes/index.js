@@ -23,8 +23,8 @@ var clientApplicationConfigs = {
 		 * 2: Allows LT
 		 */
 		roomId : 1,
-		startDate : "2013/09/06 12:00",
-		endDate : "2013/09/06 23:59"
+		startDate : "2013/10/04 00:00",
+		endDate : "2013/10/04 23:59"
 }
 /**
  * Condidates Data
