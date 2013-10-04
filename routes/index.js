@@ -180,3 +180,12 @@ exports.api_10_userlist_show = function(req, res){
 	res.contentType('application/json');
 	res.end(JSON.stringify(result));
 }
+
+// ----------------------------------------------------------------------------------------------
+//
+//  Advirtise
+//
+// ----------------------------------------------------------------------------------------------
+exports.ad_lm_sports_club = function(req, res){
+	res.render('ad');
+}
