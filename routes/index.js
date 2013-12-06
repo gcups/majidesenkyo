@@ -23,8 +23,8 @@ var clientApplicationConfigs = {
 		 * 2: Allows LT
 		 */
 		roomId : 1,
-		startDate : "2013/11/08 00:00",
-		endDate : "2013/11/08 23:59"
+		startDate : "2013/12/06 00:00",
+		endDate : "2013/12/06 23:59"
 }
 /**
  * Condidates Data
@@ -41,7 +41,8 @@ var candidates = {
 		1520: {teamName : "COM",
 		       name     : "松嶋 克仁",
 		       title    : "アプリ内課金とapple審査",
-		       img      : "/images/butoukai/20131108/matsushima.jpg"},		1530: {teamName : "LM",
+		       img      : "/images/butoukai/20131108/matsushima.jpg"},
+		1530: {teamName : "LM",
 		       name     : "大森 翔太",
 		       title    : "ENGに聞いてほしい！ヘルスケア講座",
 		       img      : "/images/butoukai/20131108/omori.jpg"},
