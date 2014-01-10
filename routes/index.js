@@ -23,45 +23,41 @@ var clientApplicationConfigs = {
 		 * 2: Allows LT
 		 */
 		roomId : 1,
-		startDate : "2013/12/06 00:00",
-		endDate : "2013/12/06 23:59"
+		startDate : "2014/01/10 00:00",
+		endDate : "2014/01/10 23:59"
 }
 /**
  * Condidates Data
  */
 var candidates = {
-		1600: {teamName : "Demo",
+		1700: {teamName : "Demo",
 		       name     : "!*デモ*!",
 		       title    : "デモ投票用",
 		       img      : "/images/butoukai/demo.jpg"},
-/*
-		1610: {teamName : "Section Manager",
-		       name     : "大石 泰子",
-		       title    : "Keynote",
-		       img      : "/images/butoukai/20131206/oishi.jpg"},
-*/
-		1620: {teamName : "ENG",
-		       name     : "大西 信寛",
-		       title    : "Final Distance ~昨日の自分にbye-bye~",
-		       img      : "/images/butoukai/20131206/onishi.jpg"},
-		1630: {teamName : "ENG LD",
-		       name     : "坂本 康朗",
-		       title    : "U・S・A！U・S・A！",
-		       img      : "/images/butoukai/20131206/sakamoto.jpg"},
-		1640: {teamName : "PRO",
-		       name     : "松田 俊之",
-		       title    : "数値で見る楽天アドネットワークについて",
-		       img      : "/images/butoukai/20131206/matsuda.jpg"},
-		1650: {teamName : "GM",
-		       name     : "鈴木 裕次",
-		       title    : "プロ野球のビジネスモデルについて（再放送）",
-		       img      : "/images/butoukai/20131206/suzuki_yuji.png"},
-/*
-		1660: {teamName : "",
-		       name     : "",
-		       title    : "",
-		       img      : "/images/butoukai//.jpg"},
-*/
+		1710: {teamName : "Guest",
+		       name     : "鴇田 大岳",
+		       title    : "About Rakuten Mart",
+		       img      : "/images/butoukai/20140110/tokita.jpg"},
+		1720: {teamName : "NSYS",
+		       name     : "三浦 憲太郎",
+		       title    : "一助になれば",
+		       img      : "/images/butoukai/20140110/miura.jpg"},
+		1730: {teamName : "LM",
+		       name     : "長谷川 剛",
+		       title    : "画像から夢を拾う",
+		       img      : "/images/butoukai/20140110/hasegawa.jpg"},
+		1740: {teamName : "COM",
+		       name     : "杉浦 健治",
+		       title    : "会社を辞める前に思い出して欲しいコト",
+		       img      : "/images/butoukai/20140110/sugiura.jpg"},
+		1750: {teamName : "ME",
+		       name     : "木下 和俊",
+		       title    : "駆逐してやる（JSを）",
+		       img      : "/images/butoukai/20140110/kinoshita.jpg"},
+		1760: {teamName : "TS",
+		       name     : "道川 雅嘉",
+		       title    : "Let's Smart!",
+		       img      : "/images/butoukai/20140110/michikawa.jpg"},
 }
 
 // ----------------------------------------------------------------------------------------------
