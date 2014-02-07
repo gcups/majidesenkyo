@@ -23,41 +23,41 @@ var clientApplicationConfigs = {
 		 * 2: Allows LT
 		 */
 		roomId : 1,
-		startDate : "2014/01/10 00:00",
-		endDate : "2014/01/10 23:59"
+		startDate : "2014/02/07 00:00",
+		endDate : "2014/02/07 23:59"
 }
 /**
  * Condidates Data
  */
 var candidates = {
-		1700: {teamName : "Demo",
+		1800: {teamName : "Demo",
 		       name     : "!*デモ*!",
 		       title    : "デモ投票用",
 		       img      : "/images/butoukai/demo.jpg"},
-		1710: {teamName : "Guest",
-		       name     : "鴇田 大岳",
-		       title    : "About Rakuten Mart",
-		       img      : "/images/butoukai/20140110/tokita.jpg"},
-		1720: {teamName : "NSYS",
-		       name     : "三浦 憲太郎",
-		       title    : "一助になれば",
-		       img      : "/images/butoukai/20140110/miura.jpg"},
-		1730: {teamName : "LM",
-		       name     : "長谷川 剛",
-		       title    : "画像から夢を拾う",
-		       img      : "/images/butoukai/20140110/hasegawa.jpg"},
-		1740: {teamName : "COM",
-		       name     : "杉浦 健治",
-		       title    : "会社を辞める前に思い出して欲しいコト",
-		       img      : "/images/butoukai/20140110/sugiura.jpg"},
-		1750: {teamName : "ME",
-		       name     : "木下 和俊",
-		       title    : "駆逐してやる（JSを）",
-		       img      : "/images/butoukai/20140110/kinoshita.jpg"},
-		1760: {teamName : "TS",
-		       name     : "道川 雅嘉",
-		       title    : "Let's Smart!",
-		       img      : "/images/butoukai/20140110/michikawa.jpg"},
+		1810: {teamName : "Guest",
+		       name     : "小林 悠輔",
+		       title    : "にほんいちばか！",
+		       img      : "/images/butoukai/20140207/kobayashi.jpg"},
+		1820: {teamName : "NSYS",
+		       name     : "市川 泰哉",
+		       title    : "サーバントリーダーシップ",
+		       img      : "/images/butoukai/20140207/ichikawa.jpg"},
+		1830: {teamName : "COM",
+		       name     : "本間 皇成",
+		       title    : "Change Your Life.",
+		       img      : "/images/butoukai/20140207/homma.jpg"},
+		1840: {teamName : "ME",
+		       name     : "中岡 亜優",
+		       title    : "ローカル開発環境",
+		       img      : "/images/butoukai/20140207/nakaoka.jpg"},
+		1850: {teamName : "LM",
+		       name     : "尾崎 翔一",
+		       title    : "たねあかし",
+		       img      : "/images/butoukai/20140207/osaki.jpg"},
+		1860: {teamName : "TS",
+		       name     : "稲田 達樹",
+		       title    : "グリットデザイン（仮）",
+		       img      : "/images/butoukai/20140207/inada.jpg"},
 }
 
 // ----------------------------------------------------------------------------------------------
