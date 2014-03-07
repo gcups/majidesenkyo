@@ -23,41 +23,41 @@ var clientApplicationConfigs = {
 		 * 2: Allows LT
 		 */
 		roomId : 1,
-		startDate : "2014/02/07 00:00",
-		endDate : "2014/02/07 23:59"
+		startDate : "2014/03/07 00:00",
+		endDate : "2014/03/07 23:59"
 }
 /**
  * Condidates Data
  */
 var candidates = {
-		1800: {teamName : "Demo",
+		1900: {teamName : "Demo",
 		       name     : "!*デモ*!",
 		       title    : "デモ投票用",
 		       img      : "/images/butoukai/demo.jpg"},
-		1810: {teamName : "Guest",
-		       name     : "小林 悠輔",
-		       title    : "にほんいちばか！",
-		       img      : "/images/butoukai/20140207/kobayashi.jpg"},
-		1820: {teamName : "NSYS",
-		       name     : "市川 泰哉",
-		       title    : "サーバントリーダーシップ",
-		       img      : "/images/butoukai/20140207/ichikawa.jpg"},
-		1830: {teamName : "COM",
-		       name     : "本間 皇成",
-		       title    : "Change Your Life.",
-		       img      : "/images/butoukai/20140207/homma.jpg"},
-		1840: {teamName : "ME",
-		       name     : "中岡 亜優",
-		       title    : "ローカル開発環境",
-		       img      : "/images/butoukai/20140207/nakaoka.jpg"},
-		1850: {teamName : "LM",
-		       name     : "尾崎 翔一",
-		       title    : "たねあかし",
-		       img      : "/images/butoukai/20140207/osaki.jpg"},
-		1860: {teamName : "TS",
-		       name     : "稲田 達樹",
-		       title    : "グリットデザイン（仮）",
-		       img      : "/images/butoukai/20140207/inada.jpg"},
+		1910: {teamName : "Guest",
+		       name     : "高見澤 大輔",
+		       title    : "wyesno10[1-3]z",
+		       img      : "/images/butoukai/20140307/takamizawa.jpg"},
+		1920: {teamName : "NSYS",
+		       name     : "井桁 正人",
+		       title    : "Operation as Code by Jira",
+		       img      : "/images/butoukai/20140307/igeta.jpg"},
+		1930: {teamName : "LM",
+		       name     : "佐藤 寛貴",
+		       title    : "ChatWars",
+		       img      : "/images/butoukai/20140307/sato.jpg"},
+		1940: {teamName : "ME",
+		       name     : "中村 圭吾",
+		       title    : "ツールバーの紹介的な何か",
+		       img      : "/images/butoukai/20140307/nakamura.jpg"},
+		1950: {teamName : "COM",
+		       name     : "鱒渕 勝幸",
+		       title    : "宵越し君（仮）",
+		       img      : "/images/butoukai/20140307/masubuchi.jpg"},
+		1960: {teamName : "TS",
+		       name     : "友田 和宏",
+		       title    : "事業で学んだ83のこと",
+		       img      : "/images/butoukai/20140307/tomoda.jpg"},
 }
 
 // ----------------------------------------------------------------------------------------------
