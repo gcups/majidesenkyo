@@ -23,41 +23,41 @@ var clientApplicationConfigs = {
 		 * 2: Allows LT
 		 */
 		roomId : 1,
-		startDate : "2014/03/07 00:00",
-		endDate : "2014/03/07 23:59"
+		startDate : "2014/04/04 00:00",
+		endDate : "2014/04/04 23:59"
 }
 /**
  * Condidates Data
  */
 var candidates = {
-		1900: {teamName : "Demo",
+		2000: {teamName : "Demo",
 		       name     : "!*デモ*!",
 		       title    : "デモ投票用",
 		       img      : "/images/butoukai/demo.jpg"},
-		1910: {teamName : "Guest",
-		       name     : "高見澤 大輔",
-		       title    : "wyesno10[1-3]z",
-		       img      : "/images/butoukai/20140307/takamizawa.jpg"},
-		1920: {teamName : "NSYS",
-		       name     : "井桁 正人",
-		       title    : "Operation as Code by Jira",
-		       img      : "/images/butoukai/20140307/igeta.jpg"},
-		1930: {teamName : "LM",
-		       name     : "佐藤 寛貴",
-		       title    : "ChatWars",
-		       img      : "/images/butoukai/20140307/sato.jpg"},
-		1940: {teamName : "ME",
-		       name     : "中村 圭吾",
-		       title    : "ツールバーの紹介的な何か",
-		       img      : "/images/butoukai/20140307/nakamura.jpg"},
-		1950: {teamName : "COM",
-		       name     : "鱒渕 勝幸",
-		       title    : "宵越し君（仮）",
-		       img      : "/images/butoukai/20140307/masubuchi.jpg"},
-		1960: {teamName : "TS",
-		       name     : "友田 和宏",
-		       title    : "事業で学んだ83のこと",
-		       img      : "/images/butoukai/20140307/tomoda.jpg"},
+		2010: {teamName : "Guest",
+		       name     : "涌井 雅俊",
+		       title    : "思い出にふける",
+		       img      : "/images/butoukai/20140404/wakui.jpg"},
+		2020: {teamName : "NSYS",
+		       name     : "川俣 彰裕",
+		       title    : "Kawamata dark side - To get 1st on Budoukai -",
+		       img      : "/images/butoukai/20140404/kawamata.jpg"},
+		2030: {teamName : "LM",
+		       name     : "福田 健仁",
+		       title    : "イリュージョン",
+		       img      : "/images/butoukai/20140404/amano.jpg"},
+		2040: {teamName : "ME",
+		       name     : "小西 雄三",
+		       title    : "プロジェクトＸ～挑戦者たち～",
+		       img      : "/images/butoukai/20140404/konishi.jpg"},
+		2050: {teamName : "COM",
+		       name     : "佐伯 亮",
+		       title    : "愛すべき運用について",
+		       img      : "/images/butoukai/20140404/saeki.jpg"},
+		2060: {teamName : "TS",
+		       name     : "赤穂 真幸",
+		       title    : "CGI and beyond",
+		       img      : "/images/butoukai/20140404/ako.jpg"},
 }
 
 // ----------------------------------------------------------------------------------------------
