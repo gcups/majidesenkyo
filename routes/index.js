@@ -23,41 +23,43 @@ var clientApplicationConfigs = {
 		 * 2: Allows LT
 		 */
 		roomId : 1,
-		startDate : "2014/04/04 00:00",
-		endDate : "2014/04/04 23:59"
+		startDate : "2014/05/09 12:00",
+		endDate : "2014/05/09 19:30"
 }
 /**
  * Condidates Data
  */
 var candidates = {
-		2000: {teamName : "Demo",
+		2100: {teamName : "Demo",
 		       name     : "!*デモ*!",
 		       title    : "デモ投票用",
 		       img      : "/images/butoukai/demo.jpg"},
-		2010: {teamName : "Guest",
+/*
+		2110: {teamName : "Guest",
 		       name     : "涌井 雅俊",
 		       title    : "思い出にふける",
 		       img      : "/images/butoukai/20140404/wakui.jpg"},
-		2020: {teamName : "NSYS",
+		2120: {teamName : "NSYS",
 		       name     : "川俣 彰裕",
 		       title    : "Kawamata dark side - To get 1st on Budoukai -",
 		       img      : "/images/butoukai/20140404/kawamata.jpg"},
-		2030: {teamName : "LM",
-		       name     : "福田 健仁",
-		       title    : "イリュージョン",
-		       img      : "/images/butoukai/20140404/amano.jpg"},
-		2040: {teamName : "ME",
-		       name     : "小西 雄三",
-		       title    : "プロジェクトＸ～挑戦者たち～",
-		       img      : "/images/butoukai/20140404/konishi.jpg"},
-		2050: {teamName : "COM",
-		       name     : "佐伯 亮",
-		       title    : "愛すべき運用について",
-		       img      : "/images/butoukai/20140404/saeki.jpg"},
-		2060: {teamName : "TS",
-		       name     : "赤穂 真幸",
-		       title    : "CGI and beyond",
-		       img      : "/images/butoukai/20140404/ako.jpg"},
+*/
+		2130: {teamName : "COM",
+		       name     : "山本 陽司",
+		       title    : "ありまーーすっ",
+		       img      : "/images/butoukai/20140509/yamamoto.jpg"},
+		2140: {teamName : "LM",
+		       name     : "木村 正宏",
+		       title    : "LOVE ROOM",
+		       img      : "/images/butoukai/20140509/kimura.jpg"},
+		2150: {teamName : "ME",
+		       name     : "城田 尚志",
+		       title    : "Power Point",
+		       img      : "/images/butoukai/20140509/shirota.jpg"},
+		2160: {teamName : "TS",
+		       name     : "清水 幸子",
+		       title    : "リーダブル！",
+		       img      : "/images/butoukai/20140509/shimizu.jpg"},
 }
 
 // ----------------------------------------------------------------------------------------------
