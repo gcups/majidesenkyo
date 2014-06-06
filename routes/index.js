@@ -23,43 +23,41 @@ var clientApplicationConfigs = {
 		 * 2: Allows LT
 		 */
 		roomId : 1,
-		startDate : "2014/05/09 12:00",
-		endDate : "2014/05/09 19:30"
+		startDate : "2014/06/06 12:00",
+		endDate : "2014/06/06 19:30"
 }
 /**
  * Condidates Data
  */
 var candidates = {
-		2100: {teamName : "Demo",
+		2200: {teamName : "Demo",
 		       name     : "!*デモ*!",
 		       title    : "デモ投票用",
 		       img      : "/images/butoukai/demo.jpg"},
-/*
-		2110: {teamName : "Guest",
-		       name     : "涌井 雅俊",
-		       title    : "思い出にふける",
-		       img      : "/images/butoukai/20140404/wakui.jpg"},
-		2120: {teamName : "NSYS",
-		       name     : "川俣 彰裕",
-		       title    : "Kawamata dark side - To get 1st on Budoukai -",
-		       img      : "/images/butoukai/20140404/kawamata.jpg"},
-*/
-		2130: {teamName : "COM",
-		       name     : "山本 陽司",
-		       title    : "ありまーーすっ",
-		       img      : "/images/butoukai/20140509/yamamoto.jpg"},
-		2140: {teamName : "LM",
-		       name     : "木村 正宏",
-		       title    : "LOVE ROOM",
-		       img      : "/images/butoukai/20140509/kimura.jpg"},
-		2150: {teamName : "ME",
-		       name     : "城田 尚志",
-		       title    : "Power Point",
-		       img      : "/images/butoukai/20140509/shirota.jpg"},
-		2160: {teamName : "TS",
-		       name     : "清水 幸子",
-		       title    : "リーダブル！",
-		       img      : "/images/butoukai/20140509/shimizu.jpg"},
+		2210: {teamName : "COM",
+		       name     : "八巻 裕之",
+		       title    : "最近スゴイなと思ったこと",
+		       img      : "/images/butoukai/20140606/yamaki.jpg"},
+		2220: {teamName : "NSYS",
+		       name     : "清水 裕平",
+		       title    : "Racoon2 の紹介",
+		       img      : "/images/butoukai/20140606/shimizu_yuhei.jpg"},
+		2230: {teamName : "Research",
+		       name     : "椛澤 嘉弘",
+		       title    : "新卒とテストと自動化",
+		       img      : "/images/butoukai/20140606/kabasawa.jpg"},
+		2240: {teamName : "ME",
+		       name     : "当麻 真悟",
+		       title    : "ぱむちょむ　あぽろじゃいず",
+		       img      : "/images/butoukai/20140606/toma.jpg"},
+		2250: {teamName : "TS",
+		       name     : "下地 玄継",
+		       title    : "ひ・み・つ♪",
+		       img      : "/images/butoukai/20140606/shimoji.png"},
+		2260: {teamName : "LM",
+		       name     : "盧 迪",
+		       title    : "Cross Culture",
+		       img      : "/images/butoukai/20140606/lu.jpg"},
 }
 
 // ----------------------------------------------------------------------------------------------
