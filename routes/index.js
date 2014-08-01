@@ -23,43 +23,41 @@ var clientApplicationConfigs = {
 		 * 2: Allows LT
 		 */
 		roomId : 1,
-		startDate : "2014/07/04 13:00",
-		endDate : "2014/07/04 20:00"
+		startDate : "2014/08/01 13:00",
+		endDate : "2014/08/01 20:00"
 }
 /**
  * Condidates Data
  */
 var candidates = {
-		2300: {teamName : "Demo",
+		2400: {teamName : "Demo",
 		       name     : "!*デモ*!",
 		       title    : "デモ投票用",
 		       img      : "/images/butoukai/demo.jpg"},
-		2310: {teamName : "COM",
-		       name     : "越沼 尊章",
-		       title    : "GG",
-		       img      : "/images/butoukai/20140704/koshinuma.jpg"},
-		2320: {teamName : "Research",
-		       name     : "村上 拓也",
-		       title    : "動的計画法",
-		       img      : "/images/butoukai/20140704/murakami.jpg"},
-		2330: {teamName : "ME",
-		       name     : "紙谷 知弘",
-		       title    : "ドデカミンストロング！",
-		       img      : "/images/butoukai/20140704/kamitani.png"},
-		2340: {teamName : "TS",
-		       name     : "早坂 悠佑",
-		       title    : "クリティカル・シンキング",
-		       img      : "/images/butoukai/20140704/hayasaka.jpg"},
-		2350: {teamName : "LM",
+		2410: {teamName : "COM",
+		       name     : "小松 真",
+		       title    : "最近つらいこと（仮）",
+		       img      : "/images/butoukai/20140801/komatsu.jpg"},
+		2420: {teamName : "NSYS",
+		       name     : "ElBadaoui Yassine",
+		       title    : "言語を学ぶ楽しさ！",
+		       img      : "/images/butoukai/20140801/yassine.png"},
+		2430: {teamName : "ME",
+		       name     : "齋藤 恵子",
+		       title    : "新サ一武道会を盛り上げることについて(ちょっとだけ)真剣に考えてみました",
+		       img      : "/images/butoukai/20140801/saito.jpg"},
+		2440: {teamName : "LM",
 		       name     : "尾崎 翔一",
-		       title    : "今日から俺は！！ ～三十路だよ～",
-		       img      : "/images/butoukai/20140704/osaki.jpg"},
-		/*
-		2360: {teamName : "NSYS",
-		       name     : "清水 裕平",
-		       title    : "Racoon2 の紹介",
-		       img      : "/images/butoukai/20140606/shimizu_yuhei.jpg"},
-		*/
+		       title    : "みんなでつくろう",
+		       img      : "/images/butoukai/20140801/osaki.jpg"},
+		2450: {teamName : "Research",
+		       name     : "市川 祐己",
+		       title    : "私とDevOps",
+		       img      : "/images/butoukai/20140801/ichikawa_yuki.jpg"},
+		2460: {teamName : "TS",
+		       name     : "岡部 聖",
+		       title    : "コードゴルフのすすめ",
+		       img      : "/images/butoukai/20140801/okabe.jpg"},
 }
 
 // ----------------------------------------------------------------------------------------------
