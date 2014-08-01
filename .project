@@ -7,5 +7,7 @@
 	<buildSpec>
 	</buildSpec>
 	<natures>
+		<nature>org.nodeclipse.ui.NodeNature</nature>
+		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
 </projectDescription>
