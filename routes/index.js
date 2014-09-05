@@ -23,41 +23,43 @@ var clientApplicationConfigs = {
 		 * 2: Allows LT
 		 */
 		roomId : 1,
-		startDate : "2014/08/01 13:00",
-		endDate : "2014/08/01 20:00"
+		startDate : "2014/09/05 13:00",
+		endDate : "2014/09/05 20:00"
 }
 /**
- * Condidates Data
+ * Candidates Data
  */
 var candidates = {
-		2400: {teamName : "Demo",
+		2500: {teamName : "Demo",
 		       name     : "!*デモ*!",
 		       title    : "デモ投票用",
 		       img      : "/images/butoukai/demo.jpg"},
-		2410: {teamName : "COM",
-		       name     : "小松 真",
-		       title    : "最近つらいこと（仮）",
-		       img      : "/images/butoukai/20140801/komatsu.jpg"},
-		2420: {teamName : "NSYS",
-		       name     : "ElBadaoui Yassine",
-		       title    : "言語を学ぶ楽しさ！",
-		       img      : "/images/butoukai/20140801/yassine.png"},
-		2430: {teamName : "ME",
-		       name     : "齋藤 恵子",
-		       title    : "新サ一武道会を盛り上げることについて(ちょっとだけ)真剣に考えてみました",
-		       img      : "/images/butoukai/20140801/saito.jpg"},
-		2440: {teamName : "LM",
-		       name     : "尾崎 翔一",
-		       title    : "みんなでつくろう",
-		       img      : "/images/butoukai/20140801/osaki.jpg"},
-		2450: {teamName : "Research",
-		       name     : "市川 祐己",
-		       title    : "私とDevOps",
-		       img      : "/images/butoukai/20140801/ichikawa_yuki.jpg"},
-		2460: {teamName : "TS",
-		       name     : "岡部 聖",
-		       title    : "コードゴルフのすすめ",
+		2510: {teamName : "TS",
+		       name     : "福正 太郎",
+		       title    : "メントレ",
+		       img      : "/images/butoukai/20140905/fukumasa.png"},
+		2520: {teamName : "Research",
+		       name     : "白崎 大志",
+		       title    : "FTS開発",
+		       img      : "/images/butoukai/20140905/shirasaki.jpg"},
+		2530: {teamName : "COM",
+		       name     : "三浦 憲太郎",
+		       title    : "最近思い出したこと",
+		       img      : "/images/butoukai/20140905/miura.jpg"},
+		2540: {teamName : "LM",
+		       name     : "古宮 伸久",
+		       title    : "webRTC",
+		       img      : "/images/butoukai/20140905/komiya.png"},
+		2550: {teamName : "ME",
+		       name     : "木下 和俊",
+		       title    : "ジャパネットきのした",
+		       img      : "/images/butoukai/20140905/kinoshita.png"},
+/*
+		2560: {teamName : "",
+		       name     : "",
+		       title    : "",
 		       img      : "/images/butoukai/20140801/okabe.jpg"},
+*/
 }
 
 // ----------------------------------------------------------------------------------------------
