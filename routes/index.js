@@ -23,43 +23,41 @@ var clientApplicationConfigs = {
 		 * 2: Allows LT
 		 */
 		roomId : 1,
-		startDate : "2014/09/05 13:00",
-		endDate : "2014/09/05 20:00"
+		startDate : "2014/10/03 11:00",
+		endDate : "2014/10/03 20:00"
 }
 /**
  * Candidates Data
  */
 var candidates = {
-		2500: {teamName : "Demo",
+		2600: {teamName : "Demo",
 		       name     : "!*デモ*!",
 		       title    : "デモ投票用",
 		       img      : "/images/butoukai/demo.jpg"},
-		2510: {teamName : "TS",
-		       name     : "福正 太郎",
-		       title    : "メントレ",
-		       img      : "/images/butoukai/20140905/fukumasa.png"},
-		2520: {teamName : "Research",
-		       name     : "白崎 大志",
-		       title    : "FTS開発",
-		       img      : "/images/butoukai/20140905/shirasaki.jpg"},
-		2530: {teamName : "COM",
-		       name     : "三浦 憲太郎",
-		       title    : "最近思い出したこと",
-		       img      : "/images/butoukai/20140905/miura.jpg"},
-		2540: {teamName : "LM",
-		       name     : "古宮 伸久",
-		       title    : "webRTC",
-		       img      : "/images/butoukai/20140905/komiya.png"},
-		2550: {teamName : "ME",
-		       name     : "木下 和俊",
-		       title    : "ジャパネットきのした",
-		       img      : "/images/butoukai/20140905/kinoshita.png"},
-/*
-		2560: {teamName : "",
-		       name     : "",
-		       title    : "",
-		       img      : "/images/butoukai/20140801/okabe.jpg"},
-*/
+		2610: {teamName : "TS",
+		       name     : "早川 裕太",
+		       title    : "画像認識技術から分かる！<br> “あの行動”の理由",
+		       img      : "/images/butoukai/20141003/hayakawa.jpg"},
+		2620: {teamName : "LM",
+		       name     : "田浦 康一",
+		       title    : "Android開発とMock",
+		       img      : "/images/butoukai/20141003/taura.jpg"},
+		2630: {teamName : "NSYS",
+		       name     : "Huang Yin(ふぁんぐ いん)",
+		       title    : "\"high speed\" photography",
+		       img      : "/images/butoukai/20141003/huang.jpg"},
+		2640: {teamName : "ME",
+		       name     : "野々山 崚",
+		       title    : "時系列リンク解析によるwebコミュニティの発見に関する研究…で使ったクローラーのお話",
+		       img      : "/images/butoukai/20141003/nonoyama.jpg"},
+		2650: {teamName : "RESEARCH",
+		       name     : "石倉 和将",
+		       title    : "\"そんなアナタに伝えたい\"",
+		       img      : "/images/butoukai/20141003/ishikura.png"},
+		2660: {teamName : "COM",
+		       name     : "小松 真",
+		       title    : "スマホアプリをつくろう",
+		       img      : "/images/butoukai/20141003/komatsu.jpg"},
 }
 
 // ----------------------------------------------------------------------------------------------
