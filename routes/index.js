@@ -23,41 +23,43 @@ var clientApplicationConfigs = {
 		 * 2: Allows LT
 		 */
 		roomId : 1,
-		startDate : "2014/10/03 11:00",
-		endDate : "2014/10/03 20:00"
+		startDate : "2014/11/07 11:00",
+		endDate : "2014/11/07 20:00"
 }
 /**
  * Candidates Data
  */
 var candidates = {
-		2600: {teamName : "Demo",
+		2700: {teamName : "Demo",
 		       name     : "!*デモ*!",
 		       title    : "デモ投票用",
 		       img      : "/images/butoukai/demo.jpg"},
-		2610: {teamName : "TS",
-		       name     : "早川 裕太",
-		       title    : "画像認識技術から分かる！<br> “あの行動”の理由",
-		       img      : "/images/butoukai/20141003/hayakawa.jpg"},
-		2620: {teamName : "LM",
-		       name     : "田浦 康一",
-		       title    : "Android開発とMock",
-		       img      : "/images/butoukai/20141003/taura.jpg"},
-		2630: {teamName : "NSYS",
-		       name     : "Huang Yin(ふぁんぐ いん)",
-		       title    : "\"high speed\" photography",
-		       img      : "/images/butoukai/20141003/huang.jpg"},
-		2640: {teamName : "ME",
-		       name     : "野々山 崚",
-		       title    : "時系列リンク解析によるwebコミュニティの発見に関する研究…で使ったクローラーのお話",
-		       img      : "/images/butoukai/20141003/nonoyama.jpg"},
-		2650: {teamName : "RESEARCH",
-		       name     : "石倉 和将",
-		       title    : "\"そんなアナタに伝えたい\"",
-		       img      : "/images/butoukai/20141003/ishikura.png"},
-		2660: {teamName : "COM",
-		       name     : "小松 真",
-		       title    : "スマホアプリをつくろう",
-		       img      : "/images/butoukai/20141003/komatsu.jpg"},
+		2710: {teamName : "COM",
+		       name     : "秋田 恵里",
+		       title    : "ふれ（あい）",
+		       img      : "/images/butoukai/20141107/akita.jpg"},
+		2720: {teamName : "LM",
+		       name     : "近藤 洋未",
+		       title    : "ここが変だよ日本人",
+		       img      : "/images/butoukai/20141107/kondo.jpg"},
+		2730: {teamName : "TS",
+		       name     : "村田 名美枝",
+		       title    : "Lamp for Local",
+		       img      : "/images/butoukai/20141107/murata.png"},
+		2740: {teamName : "ME",
+		       name     : "中岡 亜優",
+		       title    : "File API",
+		       img      : "/images/butoukai/20141107/nakaoka.jpg"},
+		2750: {teamName : "NSYS",
+		       name     : "西澤 健太郎",
+		       title    : "NASばるな、NASねば成らぬ",
+		       img      : "/images/butoukai/20141107/nishizawa.png"},
+/*
+		2760: {teamName : "RESEARCH",
+		       name     : "前田 達也",
+		       title    : "",
+		       img      : "/images/butoukai/20141107/.jpg"},
+*/
 }
 
 // ----------------------------------------------------------------------------------------------
