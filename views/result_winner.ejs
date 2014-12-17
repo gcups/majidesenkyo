@@ -45,8 +45,7 @@ div#page1 .img_section img {
 	height: 180px;
 	border: 3px solid rgb(252,193,224);
 }
-div#page1 .result {
-	clear: both;
+div#page1 .result-open {
 	width: 250px;
 	height: 1.3em;
 	margin: 0 auto;
@@ -54,6 +53,16 @@ div#page1 .result {
 	background: #f0f8ee;
 	padding: 0.2em 25px;
 	font-size: 24pt;
+}
+div#page1 .result {
+	clear: both;
+	width: 250px;
+	height: 1.2em;
+	margin: 0 auto;
+	border: 3px solid #59cd7b;
+	background: #f0f8ee;
+	padding: 0.2em 25px;
+	font-size: 30pt;
 }
 div#page1 .img_comment2 {
 	float:  left;
@@ -139,7 +148,7 @@ $(function(){
 <%- include partials/commons/navbar.ejs %>
 			</div>
 			<div class="detail_sections">
-			<div class="result" id="show-points">
+			<div class="result-open" id="show-points">
 				<div class="img_comment3">まだ見ないでね</div>
 			</div>
 			<div class="condidate hidden">
