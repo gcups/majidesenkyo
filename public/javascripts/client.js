@@ -15,24 +15,24 @@ $(function(){
 
 			// UserImage
 			var userImg = "noimage.gif";
-			if(data.name == "蜈ｼ蟶ｸ" ){
+			if(data.name == "兼常" ){
 				userImg = "kanetsunesan.jpg";
-			}else if(data.name == "蟆剰･ｿ" ){
+			}else if(data.name == "小西" ){
 				userImg = "konitan.jpg";
-			}else if(data.name == "譚ｾ蠍" ){
+			}else if(data.name == "松嶋" ){
 				userImg = "matwu-.jpg";
-			}else if(data.name == "蟆ｾ蟠" ){
+			}else if(data.name == "尾崎" ){
 				userImg = "osaki.jpg";
-			}else if(data.name == "豼ｱ驥" ){
+			}else if(data.name == "濱野" ){
 				userImg = "hamanosan.jpg";
-			}else if(data.name == "螟ｧ遏ｳ" ){
+			}else if(data.name == "大石" ){
 				userImg = "ooishisan.jpg";
-			}else if(data.name == "遏｢荳" ){
+			}else if(data.name == "矢下" ){
 				userImg = "yashita.jpg";
 			}
 
 			// adjustment date format and write HTML
-			var date = yyyy + "/" + mm + "/" + dd + " " + hh + ":" + ss ;
+			var date = yyyy + "/" + (mm < 10 ? "0" + mm : mm) + "/" + (dd < 10 ? "0" + dd : dd) + " " + hh + ":" + (ss < 10 ? "0" + ss : ss);
 			$('#list').prepend($('<dt><img id="img" src="/images/' + userImg + '" height="50"><font color="blue" size="5"> ' + data.name + '</font>' + date + '</dt><div class="bubble"><dd class="body">' + data.message + '</dd></div><br><br><br>'));
 		});
 	});
@@ -46,7 +46,7 @@ $(function(){
 		var current_id = $('#id').val();
 		if(current_id == push_price_data.id){
 			$('#id').attr('value',push_price_data.id);
-			$('#sum').html(push_price_data.count);
+			$('#sum').html((new Number(push_price_data.count)).toLocaleString('ja'));
 		}
 	});
 
@@ -69,12 +69,22 @@ $(function(){
 	// onClick event ( price button )
 	//----------------------------------------------------------------------------------
 	$('#form_price').submit(function() {
+		var point = parseInt($('#selectmenu1').val());
+		addMyPoints(point);
 		// send data to server
 		socket.emit('price.add', {
 			id:$('#id').val(),
-			selectmenu1:$('#selectmenu1').val()
+			selectmenu1:point
 		});
 		return false;
 	});
 
+	//----------------------------------------------------------------------------------
+	// My points
+	//----------------------------------------------------------------------------------
+	var myPoints = 0;
+	var addMyPoints = function(point) {
+		myPoints += point;
+		$('#my-points').html((new Number(myPoints)).toLocaleString('ja'));
+	}
 });

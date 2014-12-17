@@ -30,14 +30,15 @@ var clientApplicationConfigs = {
  * Candidates Data
  */
 var candidates = {
-		2700: {teamName : "Demo",
+		2800: {teamName : "Demo",
 		       name     : "!*デモ*!",
 		       title    : "デモ投票用",
 		       img      : "/images/butoukai/demo.jpg"},
-		2710: {teamName : "COM",
-		       name     : "秋田 恵里",
-		       title    : "ふれ（あい）",
-		       img      : "/images/butoukai/20141107/akita.jpg"},
+		2810: {teamName : "New Grads",
+		       name     : "石倉、野々山、早川",
+		       title    : "新卒課題",
+		       img      : "/images/2014NewGrads/2014NewGrads.png"},
+/*
 		2720: {teamName : "LM",
 		       name     : "近藤 洋未",
 		       title    : "ここが変だよ日本人",
@@ -54,7 +55,6 @@ var candidates = {
 		       name     : "西澤 健太郎",
 		       title    : "NASばるな、NASねば成らぬ",
 		       img      : "/images/butoukai/20141107/nishizawa.png"},
-/*
 		2760: {teamName : "RESEARCH",
 		       name     : "前田 達也",
 		       title    : "",
@@ -150,6 +150,59 @@ exports.detail = function(req, res){
 	});
 };
 
+//----------------------------------------------------------------------------------------------
+//
+//  /result_winner
+//
+// ----------------------------------------------------------------------------------------------
+exports.result_winner = function(req, res){
+	//-------------------------------------------------------------
+	// defines
+	//-------------------------------------------------------------
+	var img = "";
+	var condidateIds = [];
+	for(var condidateId in candidates) {
+		condidateIds.push(condidateId);
+	}
+
+	//-------------------------------------------------------------
+	// Get Mongodb Connection Object
+	//-------------------------------------------------------------
+	var db = appJS.getMongoConnection();
+	var User = db.model('User');
+
+	//-------------------------------------------------------------
+	// Execute Query( select id from users)
+	//-------------------------------------------------------------
+	User.find({id:{$in:condidateIds}},function(err,docs){
+		if(err){
+			throw err;
+		}
+
+		var id = condidateIds[0];
+		var p_result = 0;
+		if(docs[0] != "" && docs[0] !== undefined){
+			docs.forEach(function(user){
+				console.log(user);
+				var winner = new User(user);
+				p_result = winner.price;
+				id = winner.id;
+			});
+		}
+
+		//-------------------------------------------------------------
+		// Call view page
+		//-------------------------------------------------------------
+		res.render('result_winner', {
+			teamName:    candidates[id]["teamName"],
+			title:   candidates[id]["title"],
+			name:    candidates[id]["name"],
+			get_img: candidates[id]["img"],
+			get_price: p_result,
+			get_id: id
+		});
+	});
+};
 
 // ----------------------------------------------------------------------------------------------
 //
