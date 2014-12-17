@@ -53,7 +53,7 @@ div#page1 .result {
 	border: 3px solid #59cd7b;
 	background: #f0f8ee;
 	padding: 0.2em 25px;
-	font-size: 28pt;
+	font-size: 24pt;
 }
 div#page1 .img_comment2 {
 	float:  left;
@@ -119,9 +119,9 @@ $(function(){
 	$('#sum').html((new Number(<%= get_price %>)).toLocaleString('ja'));
 	$('#show-points').click(function(event){
 		$('#show-points').hide(0);
-		$('.condidate.hidden').fadeIn(2000, function() {
-			$('.result.hidden').fadeIn(2000, function() {
-				$('html,body').animate({ scrollTop : $('.result').offset().top }, 400, 'swing');
+		$('.condidate.hidden').fadeIn(1000, function() {
+			$('.result.hidden').fadeIn(1000, function() {
+				$('html,body').animate({ scrollTop : $('.result-scroll').offset().top }, 400, 'swing');
 				$('.result-messages').fadeIn(1000);
 			})
 		});
@@ -149,7 +149,7 @@ $(function(){
 				<h3><%- name %></h3>
 				<% if (teamName) { %><%= teamName %><br /><% } %>
 				<% if (title) { %> 「<%- title %>」<% } %>
-				<div class="result hidden">
+				<div class="result hidden result-scroll">
 					<!--
 					<div class="img_comment3" >&nbsp;Pt</div>
 					-->
