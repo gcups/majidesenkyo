@@ -45,23 +45,15 @@ div#page1 .img_section img {
 	height: 180px;
 	border: 3px solid rgb(252,193,224);
 }
-div#page1 .result_title {
-	clear: both;
-	width: 250px;
-	margin: 0 5px;
-	padding: 5px 0 2px 0;
-	font-size: 14pt;
-	font-weight: bold;
-}
 div#page1 .result {
 	clear: both;
 	width: 250px;
-	height: 30px;
+	height: 1.3em;
 	margin: 0 auto;
 	border: 3px solid #59cd7b;
 	background: #f0f8ee;
-	padding: 3px 25px;
-	font-size: 20pt;
+	padding: 0.2em 25px;
+	font-size: 28pt;
 }
 div#page1 .img_comment2 {
 	float:  left;
@@ -73,8 +65,11 @@ div#page1 .img_comment3 {
 	border-style: none;
 	font-weight: bold;
 }
+div#page1 .hidden {
+	display: none;
+}
 div#page1 .img_comment3 img {
-	height: 25px;
+	height: 1.0em;
 }
 div#page1 .space {
 }
@@ -82,24 +77,25 @@ div#page1 .vote {
 	margin: 10px 0 0 0;
 	clear:  left;
 }
-div#page1 .message_board {
+div#page1 .result-messages {
 	width:  315px;
 	position: relative;
 	margin: 20px 0 0 0;
 }
-div#page1 .message_board_title {
+div#page1 .result-title {
 	width: 100%;
+	padding: 0.1em 0;
 	text-align: center;
 	font-weight: bold;
-	font-size: 16pt;
+	font-size: 32pt;
 	letter-spacing: 0.1em;
-	background: #59cd7b;
-	background-image: -webkit-gradient(linear,left top,left bottom,from(#59cd7b),to(#f0f8ee));
-	background-image: -webkit-linear-gradient(#59cd7b,#f0f8ee);
-	background-image: -moz-linear-gradient(#59cd7b,#f0f8ee);
-	background-image: -ms-linear-gradient(#59cd7b,#f0f8ee);
-	background-image: -o-linear-gradient(#59cd7b,#f0f8ee);
-	background-image: linear-gradient(#59cd7b,#f0f8ee);
+	background: #ffd700;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#ffd700),to(#f0f8ee));
+	background-image: -webkit-linear-gradient(#ffd700,#f0f8ee);
+	background-image: -moz-linear-gradient(#ffd700,#f0f8ee);
+	background-image: -ms-linear-gradient(#ffd700,#f0f8ee);
+	background-image: -o-linear-gradient(#ffd700,#f0f8ee);
+	background-image: linear-gradient(#ffd700,#f0f8ee);
 }
 
 .ui-select .ui-btn-icon-right .ui-btn-inner {
@@ -117,7 +113,23 @@ div#page1 .message_board_title {
 	margin: 0 0 0 10px;
 }
 </style>
-   </head>
+<script language="javascript">
+<!--
+$(function(){
+	$('#sum').html((new Number(<%= get_price %>)).toLocaleString('ja'));
+	$('#show-points').click(function(event){
+		$('#show-points').hide(0);
+		$('.condidate.hidden').fadeIn(2000, function() {
+			$('.result.hidden').fadeIn(2000, function() {
+				$('html,body').animate({ scrollTop : $('.result').offset().top }, 400, 'swing');
+				$('.result-messages').fadeIn(1000);
+			})
+		});
+	});
+});
+//-->
+</script>
+	</head>
 	<body>
 		<div data-role="page" data-theme="e" id="page1">
 			<div>
@@ -127,65 +139,28 @@ div#page1 .message_board_title {
 <%- include partials/commons/navbar.ejs %>
 			</div>
 			<div class="detail_sections">
-			<div class="condidate">
-			<div class="img_section">
-				<img id="img" src="<%= get_img %>" alt="image" />
+			<div class="result" id="show-points">
+				<div class="img_comment3">まだ見ないでね</div>
 			</div>
-			<h3><%- name %></h3>
-			<% if (teamName) { %><%= teamName %><br /><% } %>
-			<% if (title) { %> 「<%- title %>」<% } %>
-			<div class="result_title">
-			あなたの「いいね」の数
+			<div class="condidate hidden">
+				<div class="img_section">
+					<img id="img" src="<%= get_img %>" alt="image" />
+				</div>
+				<h3><%- name %></h3>
+				<% if (teamName) { %><%= teamName %><br /><% } %>
+				<% if (title) { %> 「<%- title %>」<% } %>
+				<div class="result hidden">
+					<!--
+					<div class="img_comment3" >&nbsp;Pt</div>
+					-->
+					<div class="img_comment3">&nbsp;<img src="/images/like_550x500.png"></div>
+					<div class="img_comment3" id="sum"></div>
+					<input type="hidden" name="id" id="id" value="<%= get_id %>">
+				</div>
 			</div>
-			<div class="result">
-				<!--
-				<div class="img_comment3" >&nbsp;Pt</div>
-				-->
-				<div class="img_comment3" >&nbsp;<img src="/images/like_550x500.png"></div>
-				<div class="img_comment3" id="my-points">0</div>
-			</div>
-			<!--
-			<div class="result">
-			<div class="img_comment3" >&nbsp;Pt</div>
-			<div class="img_comment3" >&nbsp;<img src="/images/like_550x500.png"></div>
-				<div class="img_comment3" id="sum"></div>
-			</div>
-			-->
-			</div>
-<script language="javascript">
-<!--
-$(function(){
-	$('#sum').html((new Number(<%= get_price %>)).toLocaleString('ja'));
-});
-//-->
-</script>
-			<form action="" id="form_price">
-			<div class="vote">
-			<input type="hidden" name="id" id="id" value="<%= get_id %>">
-			<div class="space">
-			   <select data-native-menu="false" name="selectmenu1" id="selectmenu1" data-theme="b" data-mini="true">
-				   <option selected value="100">
-					   100 Pt
-				   </option>
-				   <option value="200">
-					   200 Pt
-				   </option>
-				   <option value="300">
-					   300 Pt
-				   </option>
-				   <option value="400">
-					   400 Pt
-				   </option>
-				   <option value="500">
-					   500 Pt
-				   </option>
-				   <option value="1000">
-					   お祝儀 Pt
-				   </option>
-			  </select>
-			<div id="submit_space" class="space">
-			  <input id="submit" type="SUBMIT" value="投票" />
-			</div>
+			<div class="result-messages hidden">
+			<div class="result-title">祝　卒業！！</div>
+			<img src="/images/graduation.jpg" style="width: 100%;">
 			</div>
 <!--
 			<div style="margin: 30px 0 20px 0;">
@@ -198,21 +173,6 @@ $(function(){
 				<img src="/images/butoukai/ad/banner_20140110_1.png" style="width: 100%;">
 			</div>
 -->
-			</div>
-			</form>
-			<div class="message_board">
-			<div class="message_board_title">メッセージボード</div>
-			<div data-role="fieldcontain">
-			  <form action="" id="form_socket">
-				<fieldset data-role="controlgroup">
-				  <span>お名前</span><span style="margin: 0 0 0 5px;">：</span><input type="text" name="name" id="name" placeholder="Name"><br>
-				  <span>コメント</span><span style="margin: 0 0 0 5px;">：</span><input type="text" name="message" id="message" placeholder="Comment">
-				</fieldset>
-				<input type="SUBMIT" value="送信" />
-			  </form>
-			 <dl id="list"></dl>
-			</div>
-			</div>
 <%- include partials/commons/footer.ejs %>
 		</div>
 	</body>
