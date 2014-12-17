@@ -83,8 +83,31 @@ $(function(){
 	// My points
 	//----------------------------------------------------------------------------------
 	var myPoints = 0;
+	var showMyPoints = function() {
+		$('#my-points').html((new Number(myPoints)).toLocaleString('ja'));
+	}
 	var addMyPoints = function(point) {
 		myPoints += point;
-		$('#my-points').html((new Number(myPoints)).toLocaleString('ja'));
+		showMyPoints();
+		if (store.enabled) {
+			var context = store.get('majisen_context');
+			var current_id = $('#id').val();
+			var voteData = context.points[current_id];
+			voteData.myPoints = myPoints;
+			context.points[current_id] = voteData;
+			store.set('majisen_context', context);
+			console.log(context);
+		}
+	}
+	if (store.enabled) {
+		var context = store.get('majisen_context');
+		var current_id = $('#id').val();
+		var voteData = context.points[current_id];
+		if (voteData === undefined) {
+			voteData = {'myPoints' : myPoints};
+			context.points[current_id] = voteData;
+		}
+		myPoints = voteData.myPoints;
+		showMyPoints();
 	}
 });
