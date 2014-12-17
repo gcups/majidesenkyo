@@ -107,6 +107,7 @@ $(function(){
 			voteData = {'myPoints' : myPoints};
 			context.points[current_id] = voteData;
 		}
+		store.set('majisen_context', context);
 		myPoints = voteData.myPoints;
 		showMyPoints();
 	}
