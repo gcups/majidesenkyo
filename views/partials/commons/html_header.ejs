@@ -42,4 +42,17 @@
         <script src="/socket.io/socket.io.js"></script>
         <script src="/javascripts/client.js"></script>
         <script src="/javascripts/my.js"></script>
+        <script src="/javascripts/store.js/store+json2.min.js"></script>
+        <script language="javascript">
+void function() {
+if (store.enabled) {
+	var context = store.get('majisen_context');
+	if (context == undefined) {
+		context = {'points':{}};
+		store.set('majisen_context', context);
+	}
+	console.log(context);
+}
+}();
+        </script>
 
