@@ -45,14 +45,6 @@ div#page1 .img_section img {
 	height: 180px;
 	border: 3px solid rgb(252,193,224);
 }
-div#page1 .result_title {
-	clear: both;
-	width: 250px;
-	margin: 0 5px;
-	padding: 5px 0 2px 0;
-	font-size: 14pt;
-	font-weight: bold;
-}
 div#page1 .result {
 	clear: both;
 	width: 250px;
@@ -72,9 +64,6 @@ div#page1 .img_comment3 {
 	float:  right;
 	border-style: none;
 	font-weight: bold;
-}
-div#page1 .img_comment3 img {
-	height: 25px;
 }
 div#page1 .space {
 }
@@ -131,34 +120,14 @@ div#page1 .message_board_title {
 			<div class="img_section">
 				<img id="img" src="<%= get_img %>" alt="image" />
 			</div>
-			<h3><%- name %></h3>
-			<% if (teamName) { %><%= teamName %><br /><% } %>
-			<% if (title) { %> 「<%- title %>」<% } %>
-			<div class="result_title">
-			あなたの「いいね」ポイント
-			</div>
+				<h3><%- name %></h3>
+				<% if (teamName) { %><%= teamName %><br /><% } %>
+				<% if (title) { %> 「<%- title %>」<% } %>
 			<div class="result">
-				<!--
-				<div class="img_comment3" >&nbsp;Pt</div>
-				-->
-				<div class="img_comment3" >&nbsp;<img src="/images/like_550x500.png"></div>
-				<div class="img_comment3" id="my-points">0</div>
+			<div class="img_comment3" >Pt</div>
+			<div class="img_comment3" id="sum"><%= get_price %></div>
 			</div>
-			<!--
-			<div class="result">
-			<div class="img_comment3" >&nbsp;Pt</div>
-			<div class="img_comment3" >&nbsp;<img src="/images/like_550x500.png"></div>
-				<div class="img_comment3" id="sum"></div>
 			</div>
-			-->
-			</div>
-<script language="javascript">
-<!--
-$(function(){
-	$('#sum').html((new Number(<%= get_price %>)).toLocaleString('ja'));
-});
-//-->
-</script>
 			<form action="" id="form_price">
 			<div class="vote">
 			<input type="hidden" name="id" id="id" value="<%= get_id %>">
@@ -179,27 +148,24 @@ $(function(){
 				   <option value="500">
 					   500 Pt
 				   </option>
-				   <option value="1000">
-					   お祝儀 Pt
-				   </option>
 			  </select>
+			</div>
 			<div id="submit_space" class="space">
 			  <input id="submit" type="SUBMIT" value="投票" />
 			</div>
-			</div>
-<!--
 			<div style="margin: 30px 0 20px 0;">
 				<img src="/images/butoukai/ad/banner_20130405.png" style="width: 100%">
+<!--
 				<a href="/ad/2013/10/lm_sports_club" rel="external"><img src="/images/butoukai/ad/banner_20131005_2.png"></a>
 				<img src="/images/butoukai/ad/banner_20131005_1.png" style="width: 100%;">
 				<a href="/so-android.apk" rel="external"><img src="/images/butoukai/ad/banner_20130802_1.png" style="width: 100%;"></a>
 				<a href="http://hb.afl.rakuten.co.jp/hgc/0caafbcc.e661d1d6.0caafbcd.37106065/?pc=http%3a%2f%2fbooks.rakuten.co.jp%2frb%2f11555507%2f%3fscid%3daf_link_tbl&m=http%3a%2f%2fm.rakuten.co.jp%2fbook%2fi%2f15744937%2f"><img id="ad_img" src="/images/butoukai/ad/banner_20130705_1.png" style="width: 100%" ></a><br>
 				<img src="/images/butoukai/ad/banner_20131206.png" style="width: 100%;">
 				<img src="/images/butoukai/ad/banner_20140110_1.png" style="width: 100%;">
-			</div>
 -->
 			</div>
 			</form>
+			</div>
 			<div class="message_board">
 			<div class="message_board_title">メッセージボード</div>
 			<div data-role="fieldcontain">

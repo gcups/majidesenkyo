@@ -23,43 +23,41 @@ var clientApplicationConfigs = {
 		 * 2: Allows LT
 		 */
 		roomId : 1,
-		startDate : "2014/11/07 11:00",
-		endDate : "2014/11/07 20:00"
+		startDate : "2015/01/09 11:00",
+		endDate : "2015/01/09 20:00"
 }
 /**
  * Candidates Data
  */
 var candidates = {
-		2800: {teamName : "Demo",
+		2900: {teamName : "Demo",
 		       name     : "!*デモ*!",
 		       title    : "デモ投票用",
 		       img      : "/images/butoukai/demo.jpg"},
-		2810: {teamName : "New Grads",
-		       name     : "石倉、野々山、早川",
-		       title    : "新卒課題",
-		       img      : "/images/2014NewGrads/2014NewGrads.png"},
-/*
-		2720: {teamName : "LM",
-		       name     : "近藤 洋未",
-		       title    : "ここが変だよ日本人",
-		       img      : "/images/butoukai/20141107/kondo.jpg"},
-		2730: {teamName : "TS",
-		       name     : "村田 名美枝",
-		       title    : "Lamp for Local",
-		       img      : "/images/butoukai/20141107/murata.png"},
-		2740: {teamName : "ME",
-		       name     : "中岡 亜優",
-		       title    : "File API",
-		       img      : "/images/butoukai/20141107/nakaoka.jpg"},
-		2750: {teamName : "NSYS",
-		       name     : "西澤 健太郎",
-		       title    : "NASばるな、NASねば成らぬ",
-		       img      : "/images/butoukai/20141107/nishizawa.png"},
-		2760: {teamName : "RESEARCH",
+		2910: {teamName : "LM",
+		       name     : "木村 正宏",
+		       title    : "二重派遣ついに海外に行く",
+		       img      : "/images/butoukai/20150109/kimura.gif"},
+		2920: {teamName : "COM",
+		       name     : "泉 千幸",
+		       title    : "ずんずんずんずんしゅわー　～ポンコツいずみの大冒険～",
+		       img      : "/images/butoukai/20150109/izumi.jpg"},
+		2930: {teamName : "ME",
+		       name     : "小西 雄三",
+		       title    : "P2P UDP Hole Punching",
+		       img      : "/images/butoukai/20150109/konishi.jpg"},
+		2940: {teamName : "NSYS",
+		       name     : "樫原 沙季",
+		       title    : "むるんが",
+		       img      : "/images/butoukai/20150109/kashihara.jpg"},
+		2950: {teamName : "RESEARCH",
 		       name     : "前田 達也",
-		       title    : "",
-		       img      : "/images/butoukai/20141107/.jpg"},
-*/
+		       title    : "サーフィンとGD",
+		       img      : "/images/butoukai/20150109/maeda.jpg"},
+		2960: {teamName : "TS",
+		       name     : "川原 英明",
+		       title    : "アジャイルクエストⅢ　そして伝説へ…",
+		       img      : "/images/butoukai/20150109/kawahara.jpg"},
 }
 
 // ----------------------------------------------------------------------------------------------
@@ -150,59 +148,6 @@ exports.detail = function(req, res){
 	});
 };
 
-//----------------------------------------------------------------------------------------------
-//
-//  /result_winner
-//
-// ----------------------------------------------------------------------------------------------
-exports.result_winner = function(req, res){
-	//-------------------------------------------------------------
-	// defines
-	//-------------------------------------------------------------
-	var img = "";
-	var condidateIds = [];
-	for(var condidateId in candidates) {
-		condidateIds.push(condidateId);
-	}
-
-	//-------------------------------------------------------------
-	// Get Mongodb Connection Object
-	//-------------------------------------------------------------
-	var db = appJS.getMongoConnection();
-	var User = db.model('User');
-
-	//-------------------------------------------------------------
-	// Execute Query( select id from users)
-	//-------------------------------------------------------------
-	User.find({id:{$in:condidateIds}},function(err,docs){
-		if(err){
-			throw err;
-		}
-
-		var id = condidateIds[0];
-		var p_result = 0;
-		if(docs[0] != "" && docs[0] !== undefined){
-			docs.forEach(function(user){
-				console.log(user);
-				var winner = new User(user);
-				p_result = winner.price;
-				id = winner.id;
-			});
-		}
-
-		//-------------------------------------------------------------
-		// Call view page
-		//-------------------------------------------------------------
-		res.render('result_winner', {
-			teamName:    candidates[id]["teamName"],
-			title:   candidates[id]["title"],
-			name:    candidates[id]["name"],
-			get_img: candidates[id]["img"],
-			get_price: p_result,
-			get_id: id
-		});
-	});
-};
 
 // ----------------------------------------------------------------------------------------------
 //

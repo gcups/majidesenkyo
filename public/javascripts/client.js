@@ -69,46 +69,12 @@ $(function(){
 	// onClick event ( price button )
 	//----------------------------------------------------------------------------------
 	$('#form_price').submit(function() {
-		var point = parseInt($('#selectmenu1').val());
-		addMyPoints(point);
 		// send data to server
 		socket.emit('price.add', {
 			id:$('#id').val(),
-			selectmenu1:point
+			selectmenu1:$('#selectmenu1').val()
 		});
 		return false;
 	});
 
-	//----------------------------------------------------------------------------------
-	// My points
-	//----------------------------------------------------------------------------------
-	var myPoints = 0;
-	var showMyPoints = function() {
-		$('#my-points').html((new Number(myPoints)).toLocaleString('ja'));
-	}
-	var addMyPoints = function(point) {
-		myPoints += point;
-		showMyPoints();
-		if (store.enabled) {
-			var context = store.get('majisen_context');
-			var current_id = $('#id').val();
-			var voteData = context.points[current_id];
-			voteData.myPoints = myPoints;
-			context.points[current_id] = voteData;
-			store.set('majisen_context', context);
-			console.log(context);
-		}
-	}
-	if (store.enabled) {
-		var context = store.get('majisen_context');
-		var current_id = $('#id').val();
-		var voteData = context.points[current_id];
-		if (voteData === undefined) {
-			voteData = {'myPoints' : myPoints};
-			context.points[current_id] = voteData;
-		}
-		store.set('majisen_context', context);
-		myPoints = voteData.myPoints;
-		showMyPoints();
-	}
 });
