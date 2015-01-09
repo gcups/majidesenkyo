@@ -37,7 +37,6 @@ app.configure('production', function(){
 app.get('/', routes.index);
 //app.get('/app', routes.app);
 app.get('/detail/', routes.detail);
-app.get('/result/winner/', routes.result_winner);
 app.get('/list/', routes.list);
 app.get('/search/', routes.search);
 app.get('/api/1.0/userlist/show', routes.api_10_userlist_show);
@@ -95,7 +94,7 @@ exports.getMongoConnection = function() {
 		// call "price.add" from client side
 		//----------------------------------------------------------------------------------
 		socket.on('price.add', function(price_data) {
-					console.log(price_data.id);
+console.log(price_data.id);
 					//-------------------------------------------------------------
 					// Get data from client send data
 					//-------------------------------------------------------------
@@ -190,3 +189,4 @@ fs.open('/var/log/node.log', 'w+', function (err, fd) {
 	daemon.lock('/tmp/node.pid');
 });
 */
+
