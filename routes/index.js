@@ -23,41 +23,43 @@ var clientApplicationConfigs = {
 		 * 2: Allows LT
 		 */
 		roomId : 1,
-		startDate : "2015/01/09 11:00",
-		endDate : "2015/01/09 20:00"
+		startDate : "2015/02/06 11:00",
+		endDate : "2015/02/06 20:00"
 }
 /**
  * Candidates Data
  */
 var candidates = {
-		2900: {teamName : "Demo",
+		3000: {teamName : "Demo",
 		       name     : "!*デモ*!",
 		       title    : "デモ投票用",
 		       img      : "/images/butoukai/demo.jpg"},
-		2910: {teamName : "LM",
-		       name     : "木村 正宏",
-		       title    : "二重派遣ついに海外に行く",
-		       img      : "/images/butoukai/20150109/kimura.gif"},
-		2920: {teamName : "COM",
-		       name     : "泉 千幸",
-		       title    : "ずんずんずんずんしゅわー　～ポンコツいずみの大冒険～",
-		       img      : "/images/butoukai/20150109/izumi.jpg"},
-		2930: {teamName : "ME",
-		       name     : "小西 雄三",
-		       title    : "P2P UDP Hole Punching",
-		       img      : "/images/butoukai/20150109/konishi.jpg"},
-		2940: {teamName : "NSYS",
-		       name     : "樫原 沙季",
-		       title    : "むるんが",
-		       img      : "/images/butoukai/20150109/kashihara.jpg"},
-		2950: {teamName : "RESEARCH",
-		       name     : "前田 達也",
-		       title    : "サーフィンとGD",
-		       img      : "/images/butoukai/20150109/maeda.jpg"},
+		3010: {teamName : "COM",
+		       name     : "市原 大介",
+		       title    : "Google Playの困ったことベスト３",
+		       img      : "/images/butoukai/20150206/ichihara.jpg"},
+		3020: {teamName : "LM",
+		       name     : "小野川 晋",
+		       title    : "リーダブル設計",
+		       img      : "/images/butoukai/20150206/onogawa.jpg"},
+		3030: {teamName : "NSYS",
+		       name     : "井桁 正人",
+		       title    : "いつでもドーナツを忘れずに",
+		       img      : "/images/butoukai/20150206/igeta.png"},
+		3040: {teamName : "ME",
+		       name     : "谷川 大久",
+		       title    : "Parse入門 ～API 3分クッキング～",
+		       img      : "/images/butoukai/20150206/tanigawa.png"},
+		3050: {teamName : "TS",
+		       name     : "稲田 達樹",
+		       title    : "Android Library",
+		       img      : "/images/butoukai/20150206/inada.jpg"},
+/*
 		2960: {teamName : "TS",
 		       name     : "川原 英明",
 		       title    : "アジャイルクエストⅢ　そして伝説へ…",
 		       img      : "/images/butoukai/20150109/kawahara.jpg"},
+*/
 }
 
 // ----------------------------------------------------------------------------------------------
